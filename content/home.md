@@ -1,8 +1,7 @@
 ---
 headline: Rajat's Portfolio
 description: Welcome! My research focuses on the intersection of technology,
-  leadership, and organizational behavior. I'm particularly interested in how
-  digital transformation affects human-c
+  leadership, and organizational behavior. I'm particularly interest
 writing:
   - title: "Spaces vs. Tabs: The Indentation Debate Continues"
     date: 2024-04-08
