@@ -14,7 +14,7 @@ collections:
   - name: "homepage"
     label: "Homepage Content"
     files:
-      - file: "app/content/home.md"
+      - file: "content/home.md"
         label: "Home Page"
         name: "home"
         fields:
@@ -50,7 +50,7 @@ collections:
   - name: "cv"
     label: "Curriculum Vitae"
     files:
-      - file: "app/content/cv.md"
+      - file: "content/cv.md"
         label: "CV"
         name: "cv"
         fields:
@@ -111,7 +111,7 @@ collections:
   - name: "publications"
     label: "Publications"
     files:
-      - file: "app/content/publications.md"
+      - file: "content/publications.md"
         label: "Publications"
         name: "publications"
         fields:
@@ -138,7 +138,7 @@ collections:
   - name: "research"
     label: "Research"
     files:
-      - file: "app/content/research.md"
+      - file: "content/research.md"
         label: "Research"
         name: "research"
         fields:
@@ -193,7 +193,7 @@ collections:
   - name: "podcasts"
     label: "Speaking & Podcasts"
     files:
-      - file: "app/content/podcasts.md"
+      - file: "content/podcasts.md"
         label: "Speaking & Podcasts"
         name: "podcasts"
         fields:

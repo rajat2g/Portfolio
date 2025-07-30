@@ -28,7 +28,7 @@ type HomeContent = {
 };
 
 function getHomeContent(): HomeContent {
-  const filePath = path.join(process.cwd(), 'app', 'content', 'home.md');
+  const filePath = path.join(process.cwd(), 'content', 'home.md');
   const raw = fs.readFileSync(filePath, 'utf-8');
   const match = /^---([\s\S]*?)---/.exec(raw);
   let content: Partial<HomeContent> = {};

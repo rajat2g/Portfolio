@@ -47,7 +47,7 @@ interface CVContent {
 }
 
 export default function CVPage() {
-  const filePath = path.join(process.cwd(), "app", "content", "cv.md");
+  const filePath = path.join(process.cwd(), "content", "cv.md");
   const raw = fs.readFileSync(filePath, "utf-8");
   const match = /^---([\s\S]*?)---/.exec(raw);
   let content: CVContent = {

@@ -36,7 +36,7 @@ interface ResearchContent {
 }
 
 export default function ResearchPage() {
-  const filePath = path.join(process.cwd(), "app", "content", "research.md");
+  const filePath = path.join(process.cwd(), "content", "research.md");
   const raw = fs.readFileSync(filePath, "utf-8");
   const match = /^---([\s\S]*?)---/.exec(raw);
   let content: ResearchContent = {

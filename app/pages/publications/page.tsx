@@ -23,7 +23,7 @@ type PublicationsContent = {
 };
 
 function getPublicationsContent(): PublicationsContent {
-  const filePath = path.join(process.cwd(), "app/content/publications.md");
+  const filePath = path.join(process.cwd(), "content/publications.md");
   const raw = fs.readFileSync(filePath, "utf-8");
   const match = /^---([\s\S]*?)---/.exec(raw);
   let content: Partial<PublicationsContent> = {};

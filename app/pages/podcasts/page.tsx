@@ -31,7 +31,7 @@ interface PodcastsContent {
 }
 
 export default function PodcastsPage() {
-  const filePath = path.join(process.cwd(), "app", "content", "podcasts.md");
+  const filePath = path.join(process.cwd(), "content", "podcasts.md");
   const raw = fs.readFileSync(filePath, "utf-8");
   const match = /^---([\s\S]*?)---/.exec(raw);
   let content: PodcastsContent = {
