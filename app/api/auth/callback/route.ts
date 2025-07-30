@@ -55,6 +55,7 @@ export async function GET(req: NextRequest) {
 
     window.removeEventListener("message", receiveMessage);
     window.close(); 
+    }
 
   window.addEventListener("message", receiveMessage);
 
