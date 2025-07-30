@@ -54,7 +54,7 @@ export default function Home() {
             {writing && writing.map((item) => (
               <li key={item.link} className="mb-4">
                 <a href={item.link} className="text-lg font-semibold hover:underline">{item.title}</a>
-                <div className="text-sm text-neutral-600">{item.date}</div>
+                {/* <div className="text-sm text-neutral-600">{item.date}</div> */}
                 <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
               </li>
             ))}
@@ -66,7 +66,7 @@ export default function Home() {
             {speaking && speaking.map((item) => (
               <li key={item.link} className="mb-4">
                 <a href={item.link} className="text-lg font-semibold hover:underline" target="_blank" rel="noopener noreferrer">{item.title}</a>
-                <div className="text-sm text-neutral-600">{item.date}</div>
+                {/* <div className="text-sm text-neutral-600">{item.date}</div> */}
                 <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
               </li>
             ))}
@@ -78,7 +78,7 @@ export default function Home() {
             {publications && publications.map((item) => (
               <li key={item.link} className="mb-4">
                 <a href={item.link} className="text-lg font-semibold hover:underline" target="_blank" rel="noopener noreferrer">{item.title}</a>
-                <div className="text-sm text-neutral-600">{item.date}</div>
+                {/* <div className="text-sm text-neutral-600">{item.date}</div> */}
                 <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
               </li>
             ))}
