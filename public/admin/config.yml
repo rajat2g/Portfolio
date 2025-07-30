@@ -1,0 +1,234 @@
+
+backend:
+  name: github
+  repo: kushagra0304/rajat-portfolio
+  branch: main
+  base_url: https://rajat-portfolio-eight.vercel.app
+  auth_endpoint: /api/auth/login
+  token_endpoint: /api/auth/callback
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "homepage"
+    label: "Homepage Content"
+    files:
+      - file: "app/content/home.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Writing", name: "writing", widget: "list", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+              { label: "Description", name: "description", widget: "text" }
+            ] }
+          - { label: "Speaking", name: "speaking", widget: "list", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+              { label: "Description", name: "description", widget: "text" }
+            ] }
+          - { label: "Publications", name: "publications", widget: "list", fields: [
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Date", name: "date", widget: "string" },
+              { label: "Link", name: "link", widget: "string" },
+              { label: "Description", name: "description", widget: "text" }
+            ] }
+          - { label: "Research", name: "research", widget: "text" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Twitter", name: "twitter", widget: "string" }
+              - { label: "LinkedIn", name: "linkedin", widget: "string" } 
+
+  - name: "cv"
+    label: "Curriculum Vitae"
+    files:
+      - file: "app/content/cv.md"
+        label: "CV"
+        name: "cv"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", hint: "Main heading for the CV page." }
+          - { label: "Page Description", name: "description", widget: "text", hint: "Short summary shown at the top of the page." }
+          - label: "Education"
+            name: "education"
+            widget: "list"
+            summary: "{{degree}} at {{institution}}"
+            fields:
+              - { label: "Degree", name: "degree", widget: "string" }
+              - { label: "institution", name: "institution", widget: "string" }
+              - { label: "year", name: "year", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+          - label: "Professional Experience"
+            name: "experience"
+            widget: "list"
+            summary: "{{role}} at {{organization}}"
+            fields:
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "organization", name: "organization", widget: "string" }
+              - { label: "years", name: "years", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+          - label: "Selected Publications"
+            name: "publications"
+            widget: "list"
+            summary: "{{title}} ({{year}})"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "year", name: "year", widget: "string" }
+              - { label: "journal", name: "journal", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+          - label: "Awards & Recognition"
+            name: "awards"
+            widget: "list"
+            summary: "{{award}} ({{year}})"
+            fields:
+              - { label: "Award", name: "award", widget: "string" }
+              - { label: "year", name: "year", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+          - label: "Skills & Expertise"
+            name: "skills"
+            widget: "list"
+            summary: "{{category}}"
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "items", name: "items", widget: "list", field: { label: "Skill", name: "skill", widget: "string" } }
+          - label: "Professional Service"
+            name: "service"
+            widget: "list"
+            summary: "{{role}}"
+            fields:
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "organization", name: "organization", widget: "string" }
+              - { label: "years", name: "years", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+
+  - name: "publications"
+    label: "Publications"
+    files:
+      - file: "app/content/publications.md"
+        label: "Publications"
+        name: "publications"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", hint: "Main heading for the publications page." }
+          - { label: "Page Description", name: "description", widget: "text", hint: "Short summary shown at the top of the page." }
+          - label: "Peer-Reviewed Publications"
+            name: "publications"
+            widget: "list"
+            summary: "{{title}} ({{date}})"
+            hint: "Add each publication with its details."
+            fields:
+              - { label: "Title", name: "title", widget: "string", hint: "Title of the publication." }
+              - { label: "Date", name: "date", widget: "string", hint: "Year or date of publication." }
+              - { label: "Link", name: "link", widget: "string", hint: "URL to the publication (journal, PDF, etc.)." }
+              - { label: "Description", name: "description", widget: "text", hint: "Short description or abstract." }
+          - label: "Research Areas"
+            name: "research_areas"
+            widget: "list"
+            summary: "{{area}}"
+            hint: "List the main research areas."
+            fields:
+              - { label: "Area Description", name: "area", widget: "string", hint: "Describe the research area." }
+
+  - name: "research"
+    label: "Research"
+    files:
+      - file: "app/content/research.md"
+        label: "Research"
+        name: "research"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", hint: "Main heading for the research page." }
+          - { label: "Page Description", name: "description", widget: "text", hint: "Short summary shown at the top of the page." }
+          - label: "Research Interests"
+            name: "interests"
+            widget: "list"
+            summary: "{{interest}}"
+            fields:
+              - { label: "Interest", name: "interest", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+          - label: "Current Projects"
+            name: "current_projects"
+            widget: "list"
+            summary: "{{title}} ({{years}})"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "years", name: "years", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+          - label: "Completed Projects"
+            name: "completed_projects"
+            widget: "list"
+            summary: "{{title}} ({{years}})"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "years", name: "years", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+              - { label: "link", name: "link", widget: "string", required: false }
+          - label: "Research Methodology"
+            name: "methodology"
+            widget: "list"
+            summary: "{{method}}"
+            fields:
+              - { label: "Method", name: "method", widget: "string" }
+              - { label: "details", name: "details", widget: "text" }
+          - label: "Collaborations"
+            name: "collaborations"
+            widget: "list"
+            summary: "{{type}}"
+            fields:
+              - { label: "Type", name: "type", widget: "string", hint: "Academic or Industry" }
+              - { label: "partners", name: "partners", widget: "list", field: { label: "Partner", name: "partner", widget: "string" } }
+          - label: "Research Impact"
+            name: "impact"
+            widget: "list"
+            summary: "{{metric}}"
+            fields:
+              - { label: "Metric", name: "metric", widget: "string" }
+              - { label: "value", name: "value", widget: "string" }
+
+  - name: "podcasts"
+    label: "Speaking & Podcasts"
+    files:
+      - file: "app/content/podcasts.md"
+        label: "Speaking & Podcasts"
+        name: "podcasts"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", hint: "Main heading for the podcasts page." }
+          - { label: "Page Description", name: "description", widget: "text", hint: "Short summary shown at the top of the page." }
+          - label: "Appearances"
+            name: "appearances"
+            widget: "list"
+            summary: "{{title}} ({{date}})"
+            hint: "Add each podcast or speaking appearance."
+            fields:
+              - { label: "Title", name: "title", widget: "string", hint: "Title of the appearance." }
+              - { label: "Date", name: "date", widget: "string", hint: "Date or year of the appearance." }
+              - { label: "Link", name: "link", widget: "string", hint: "URL to the podcast or event." }
+              - { label: "Host", name: "host", widget: "string", hint: "Host or event name." }
+              - { label: "Description", name: "description", widget: "text", hint: "Short description or summary." }
+          - label: "Speaking Topics"
+            name: "topics"
+            widget: "list"
+            summary: "{{topic}}"
+            hint: "List the main speaking topics."
+            fields:
+              - { label: "Topic", name: "topic", widget: "string", hint: "Speaking topic or area." }
+              - { label: "Description", name: "description", widget: "text", hint: "Short description of the topic." }
+          - label: "Media Formats"
+            name: "formats"
+            widget: "list"
+            summary: "{{format}}"
+            hint: "List the types of media formats."
+            fields:
+              - { label: "Format", name: "format", widget: "string", hint: "Type of media (e.g., Podcast, Webinar, Panel)." }
+              - { label: "Description", name: "description", widget: "text", hint: "Short description of the format." }
+          - label: "Speaking Inquiries"
+            name: "inquiries"
+            widget: "object"
+            fields:
+              - { label: "Instructions", name: "instructions", widget: "text", hint: "Instructions for speaking inquiries." }
+              - { label: "Email", name: "email", widget: "string", hint: "Contact email for inquiries." } 
