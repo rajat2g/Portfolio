@@ -1,9 +1,9 @@
 
 backend:
   name: github
-  repo: kushagra0304/rajat-portfolio
+  repo: rajat2g/Portfolio
   branch: main
-  base_url: https://rajat-portfolio-eight.vercel.app
+  base_url: https://portfolio-two-flame-44.vercel.app
   auth_endpoint: /api/auth/login
   token_endpoint: /api/auth/callback
 
