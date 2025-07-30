@@ -7,26 +7,41 @@ const REDIRECT_URI = process.env.GITHUB_REDIRECT_URI || 'http://localhost:3000/a
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
-
     const code = searchParams.get('code');
-    if (!code) {
-        return new NextResponse(
-            `<script>window.opener.postMessage("authorization:github:error:{\\"error\\":\\"No code provided\\"}","*");window.close();</script>`,
-            { status: 400, headers: { "Content-Type": "text/html" } }
-        );
-    }
 
-    const data: Record<string, string> = {
-        code,
-        client_id: CLIENT_ID,
-        client_secret: CLIENT_SECRET,
-    };
+    if (!code) {
+        const errorScript = `
+            <!DOCTYPE html>
+            <html>
+            <head><title>Auth Error</title></head>
+            <body>
+                <script>
+                    if (window.opener) {
+                        window.opener.postMessage("authorization:github:error:{\\"error\\":\\"No code provided\\"}", "*");
+                    }
+                    window.close();
+                </script>
+            </body>
+            </html>
+        `;
+        return new NextResponse(errorScript, { 
+            status: 400, 
+            headers: { "Content-Type": "text/html" } 
+        });
+    }
 
     try {
         const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
             method: 'POST',
-            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
+            headers: { 
+                Accept: 'application/json', 
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify({
+                code,
+                client_id: CLIENT_ID,
+                client_secret: CLIENT_SECRET,
+            }),
         });
 
         if (!tokenRes.ok) {
@@ -34,49 +49,89 @@ export async function GET(req: NextRequest) {
         }
 
         const body = await tokenRes.json();
+        
+        if (!body.access_token) {
+            throw new Error('No access token received');
+        }
+
         const content = {
             token: body.access_token,
             provider: 'github',
         };
 
-        const script = `
-          <script>
-  const receiveMessage = (message) => {
-    console.log("Message received from parent:", message);
+        // Format exactly as Decap CMS expects
+        const contentStr = JSON.stringify(content).replace(/"/g, '\\"');
+        const message = `authorization:github:success:${contentStr}`;
 
-    const successMessage = 'authorization:${content.provider}:success:${JSON.stringify(content)}';
-
-    try {
-      window.opener.postMessage(successMessage, message.origin);
-      console.log("Sent message to opener");
-    } catch (e) {
-      console.error("Failed to post message to opener:", e);
-    }
-
-    window.removeEventListener("message", receiveMessage);
-    window.close(); 
-    }
-
-  window.addEventListener("message", receiveMessage);
-
-  // Notify parent that popup is ready
-  try {
-    window.opener?.postMessage("authorizing:github", "*");
-    console.log("Posted 'authorizing:github' to opener");
-  } catch (e) {
-    console.error("Unable to notify opener:", e);
-  }
-</script>
+        const successScript = `
+            <!DOCTYPE html>
+            <html>
+            <head><title>Authorization Successful</title></head>
+            <body>
+                <p>Authorization successful. This window will close automatically.</p>
+                <script>
+                    (function() {
+                        console.log('Sending auth success to Decap CMS...');
+                        
+                        function sendMessage() {
+                            if (window.opener && !window.opener.closed) {
+                                try {
+                                    window.opener.postMessage("${message}", "*");
+                                    console.log('Message sent successfully');
+                                    return true;
+                                } catch (e) {
+                                    console.error('Failed to send message:', e);
+                                    return false;
+                                }
+                            }
+                            return false;
+                        }
+                        
+                        // Try to send immediately
+                        if (sendMessage()) {
+                            setTimeout(function() { window.close(); }, 100);
+                        } else {
+                            // Retry a few times if opener isn't ready
+                            let attempts = 0;
+                            const retry = setInterval(function() {
+                                attempts++;
+                                if (sendMessage() || attempts >= 10) {
+                                    clearInterval(retry);
+                                    setTimeout(function() { window.close(); }, 100);
+                                }
+                            }, 100);
+                        }
+                    })();
+                </script>
+            </body>
+            </html>
         `;
 
-        return new NextResponse(script, {
+        return new NextResponse(successScript, {
             status: 200,
             headers: { "Content-Type": "text/html" },
         });
+
     } catch (err) {
-        return new NextResponse('<script>window.close();</script>', {
+        console.error('OAuth callback error:', err);
+        const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+        const errorScript = `
+            <!DOCTYPE html>
+            <html>
+            <head><title>Auth Error</title></head>
+            <body>
+                <script>
+                    if (window.opener) {
+                        window.opener.postMessage("authorization:github:error:{\\"error\\":\\"${errorMessage.replace(/"/g, '\\"')}\\"}", "*");
+                    }
+                    window.close();
+                </script>
+            </body>
+            </html>
+        `;
+        return new NextResponse(errorScript, {
             status: 500,
             headers: { "Content-Type": "text/html" },
         });
     }
-} 
+}
