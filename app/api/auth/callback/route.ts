@@ -11,20 +11,38 @@ const callbackScriptResponse = (status: string, token: string) => {
 <html>
 <head>
     <script>
+        console.log('Callback loaded, status:', '${status}', 'token:', '${token ? 'present' : 'missing'}');
+        
         const receiveMessage = (message) => {
-            window.opener.postMessage(
-                'authorization:github:${status}:${JSON.stringify({ token })}',
-                '*'
-            );
+            console.log('Received message from parent:', message);
+            const authMessage = 'authorization:github:${status}:${JSON.stringify({ token })}';
+            console.log('Sending message to parent:', authMessage);
+            
+            window.opener.postMessage(authMessage, '*');
             window.removeEventListener("message", receiveMessage, false);
-            window.close();
+            
+            setTimeout(() => {
+                console.log('Closing popup...');
+                window.close();
+            }, 1000);
         }
+        
         window.addEventListener("message", receiveMessage, false);
+        
+        console.log('Sending authorizing message...');
         window.opener.postMessage("authorizing:github", "*");
+        
+        // Fallback: close after 10 seconds if no response
+        setTimeout(() => {
+            console.log('Timeout reached, closing popup');
+            window.close();
+        }, 10000);
     </script>
 </head>
 <body>
     <p>Authorizing Decap...</p>
+    <p>Status: ${status}</p>
+    <p>Check console for debug info</p>
 </body>
 </html>
 `,
