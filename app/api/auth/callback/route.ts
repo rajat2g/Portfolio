@@ -41,16 +41,31 @@ export async function GET(req: NextRequest) {
 
         const script = `
           <script>
-            const receiveMessage = (message) => {
-              window.opener.postMessage(
-                'authorization:${content.provider}:success:${JSON.stringify(content)}',
-                message.origin
-              );
-              window.removeEventListener("message", receiveMessage, false);
-            }
-            window.addEventListener("message", receiveMessage, false);
-            window.opener.postMessage("authorizing:${content.provider}", "*");
-          </script>
+  const receiveMessage = (message) => {
+    console.log("Message received from parent:", message);
+
+    const successMessage = 'authorization:${content.provider}:success:${JSON.stringify(content)}';
+
+    try {
+      window.opener.postMessage(successMessage, message.origin);
+      console.log("Sent message to opener");
+    } catch (e) {
+      console.error("Failed to post message to opener:", e);
+    }
+
+    window.removeEventListener("message", receiveMessage);
+    window.close(); 
+
+  window.addEventListener("message", receiveMessage);
+
+  // Notify parent that popup is ready
+  try {
+    window.opener?.postMessage("authorizing:github", "*");
+    console.log("Posted 'authorizing:github' to opener");
+  } catch (e) {
+    console.error("Unable to notify opener:", e);
+  }
+</script>
         `;
 
         return new NextResponse(script, {
