@@ -4,72 +4,44 @@ import { NextResponse } from 'next/server';
 const CLIENT_ID = process.env.GITHUB_CLIENT_ID!;
 const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET!;
 const REDIRECT_URI = process.env.GITHUB_REDIRECT_URI || 'http://localhost:3000/api/auth/callback';
+
 const callbackScriptResponse = (status: string, token: string) => {
     return new NextResponse(
         `
 <html>
 <head>
     <script>
-        console.log('Callback loaded, status:', '${status}', 'token:', '${token ? 'present' : 'missing'}');
+        console.log('Direct approach - sending success immediately');
         
-        let messageReceived = false;
+        function sendSuccessMessage() {
+            if (window.opener && !window.opener.closed) {
+                const authMessage = 'authorization:github:${status}:${JSON.stringify({ token })}';
+                console.log('Sending:', authMessage);
+                window.opener.postMessage(authMessage, '*');
+                return true;
+            }
+            return false;
+        }
         
-        const receiveMessage = (message) => {
-            console.log('Received message from parent:', message);
-            if (messageReceived) return; // Prevent duplicate messages
-            messageReceived = true;
-            
-            const authMessage = 'authorization:github:${status}:${JSON.stringify({ token })}';
-            console.log('Sending message to parent:', authMessage);
-            
-            window.opener.postMessage(authMessage, '*');
-            window.removeEventListener("message", receiveMessage, false);
-            
-            setTimeout(() => {
-                console.log('Closing popup...');
-                window.close();
+        // Send immediately
+        if (sendSuccessMessage()) {
+            setTimeout(() => window.close(), 1000);
+        } else {
+            // Retry a few times
+            let attempts = 0;
+            const retry = setInterval(() => {
+                attempts++;
+                if (sendSuccessMessage() || attempts >= 5) {
+                    clearInterval(retry);
+                    setTimeout(() => window.close(), 1000);
+                }
             }, 500);
         }
-        
-        window.addEventListener("message", receiveMessage, false);
-        
-        // Send the authorizing message immediately
-        console.log('Sending authorizing message...');
-        if (window.opener && !window.opener.closed) {
-            window.opener.postMessage("authorizing:github", "*");
-        } else {
-            console.error('No opener window found!');
-        }
-        
-        // FALLBACK: If no response after 3 seconds, send success anyway
-        setTimeout(() => {
-            if (!messageReceived) {
-                console.log('No response from parent, sending success message anyway...');
-                const authMessage = 'authorization:github:${status}:${JSON.stringify({ token })}';
-                console.log('Fallback sending:', authMessage);
-                
-                if (window.opener && !window.opener.closed) {
-                    window.opener.postMessage(authMessage, '*');
-                }
-                
-                setTimeout(() => {
-                    console.log('Fallback: Closing popup...');
-                    window.close();
-                }, 500);
-            }
-        }, 3000);
-        
-        // Final fallback: close after 10 seconds no matter what
-        setTimeout(() => {
-            console.log('Final timeout reached, closing popup');
-            window.close();
-        }, 10000);
     </script>
 </head>
 <body>
-    <p>Authorizing Decap...</p>
-    <p>Status: ${status}</p>
-    <p>If this window doesn't close automatically, you can close it manually.</p>
+    <p>Authorization successful!</p>
+    <p>This window should close automatically...</p>
 </body>
 </html>
 `,
