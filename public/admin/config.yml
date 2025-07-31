@@ -3,7 +3,7 @@ backend:
   name: github
   repo: rajat2g/Portfolio
   branch: main
-  base_url: https://rajatgangrade.com/
+  base_url: https://portfolio-two-flame-44.vercel.app/
   auth_endpoint: api/auth/login
 
 media_folder: "public/images/uploads"
