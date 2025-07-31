@@ -8,7 +8,7 @@ publications:
   - title: Probabilistic assessment of large diameter tunnel face stability
       considering spatial variability
     date: "2025"
-    link: https://example.com/paper2
+    link: https://www.researchgate.net/publication/391580591_Probabilistic_assessment_of_large_diameter_tunnel_face_stability_considering_spatial_variability
     description: Investigating the reduction in TBM operational range due to
       variability in geotechnical parameters.
   - title: Risk-based methodology to optimize geotechnical site investigations in
