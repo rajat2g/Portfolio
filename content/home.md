@@ -1,6 +1,23 @@
 ---
 headline: Rajat's Portfolio
-description: f
+description: "I am a geotechnical and tunneling engineer with national and
+  international design and construction support experience for tunnels and
+  complex underground structures. I have served as the geotechnical and
+  tunneling engineer on numerous projects and have performed engineering
+  analyses for the design of tunnel segmental linings, analysis of shaft
+  excavations and cut-and-cover structures TBM operation and face pressures,
+  soil-structure interaction analysis and construction impact assessment on
+  structures due to tunneling. I am proficient in designing automated
+  engineering workflows and methodologies for optimizing tunnel construction
+  efficiency and is adept at developing intelligent digital tools and software
+  for tunnel risk management, geotechnical parameter uncertainty modeling, and
+  investigating impacts of TBM ground interaction. Previously, I have served as
+  the Chair of the Underground Construction Association (UCA) Young Members’
+  committee and was awarded the 2024 UCA Young Tunneler Award at the North
+  American Tunneling Conference in Nashville. I am actively involved in
+  co-authoring the chapters for recommendations on face support pressures in
+  mechanized tunneling and tunneling induced ground deformation with the
+  International Tunneling Association (ITA) working groups. "
 writing:
   - title: "Spaces vs. Tabs: The Indentation Debate Continues"
     date: 2024-04-08
