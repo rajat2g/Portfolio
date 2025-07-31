@@ -5,16 +5,18 @@ description: A collection of my research publications spanning subsurface risk
   probabilistic modeling, geostatistics, digital transformation in tunneling,
   artificial intelligence, and digital twin.
 publications:
+  - title: Probabilistic assessment of large diameter tunnel face stability
+      considering spatial variability
+    date: "2025"
+    link: https://example.com/paper2
+    description: Investigating the reduction in TBM operational range due to
+      variability in geotechnical parameters.
   - title: Risk-based methodology to optimize geotechnical site investigations in
       tunnel projects
     date: "2022"
     link: https://example.com/paper1
     description: A systematic approach to digital transformation strategy in large
       organizations.
-  - title: Organizational Learning and Technology Adoption Patterns
-    date: "2023"
-    link: https://example.com/paper2
-    description: Analyzing how organizations adapt to new technologies.
   - title: Human-Centered Design in AI Systems
     date: "2023"
     link: https://example.com/paper3
