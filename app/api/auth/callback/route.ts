@@ -5,76 +5,28 @@ const CLIENT_ID = process.env.GITHUB_CLIENT_ID!;
 const CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET!;
 const REDIRECT_URI = process.env.GITHUB_REDIRECT_URI || 'http://localhost:3000/api/auth/callback';
 
-const callbackScriptResponse = (status: string, token: string) => {
-    return new NextResponse(
-        `
-<html>
-<head>
-    <script>
-        console.log('Direct approach - sending success immediately');
-        
-        function sendSuccessMessage() {
-            if (window.opener && !window.opener.closed) {
-                const authMessage = 'authorization:github:${status}:${JSON.stringify({ token })}';
-                console.log('Sending:', authMessage);
-                window.opener.postMessage(authMessage, '*');
-                return true;
-            }
-            return false;
-        }
-        
-        // Send immediately
-        if (sendSuccessMessage()) {
-            setTimeout(() => window.close(), 1000);
-        } else {
-            // Retry a few times
-            let attempts = 0;
-            const retry = setInterval(() => {
-                attempts++;
-                if (sendSuccessMessage() || attempts >= 5) {
-                    clearInterval(retry);
-                    setTimeout(() => window.close(), 1000);
-                }
-            }, 500);
-        }
-    </script>
-</head>
-<body>
-    <p>Authorization successful!</p>
-    <p>This window should close automatically...</p>
-</body>
-</html>
-`,
-        { headers: { 'Content-Type': 'text/html' } }
-    );
-};
-
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
+
     const code = searchParams.get('code');
-    const error = searchParams.get('error');
-
-    // Handle OAuth errors (user denied access, etc.)
-    if (error) {
-        return callbackScriptResponse('error', JSON.stringify({ error }));
-    }
-
     if (!code) {
-        return callbackScriptResponse('error', JSON.stringify({ error: 'No code provided' }));
+        return new NextResponse(
+            `<script>window.opener.postMessage("authorization:github:error:{\\"error\\":\\"No code provided\\"}","*");window.close();</script>`,
+            { status: 400, headers: { "Content-Type": "text/html" } }
+        );
     }
+
+    const data: Record<string, string> = {
+        code,
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+    };
 
     try {
         const tokenRes = await fetch('https://github.com/login/oauth/access_token', {
             method: 'POST',
-            headers: { 
-                Accept: 'application/json', 
-                'Content-Type': 'application/json' 
-            },
-            body: JSON.stringify({
-                code,
-                client_id: CLIENT_ID,
-                client_secret: CLIENT_SECRET,
-            }),
+            headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
         });
 
         if (!tokenRes.ok) {
@@ -82,21 +34,33 @@ export async function GET(req: NextRequest) {
         }
 
         const body = await tokenRes.json();
-        
-        if (body.error) {
-            throw new Error(body.error_description || body.error);
-        }
+        const content = {
+            token: body.access_token,
+            provider: 'github',
+        };
 
-        if (!body.access_token) {
-            throw new Error('No access token received');
-        }
+        const script = `
+          <script>
+            const receiveMessage = (message) => {
+              window.opener.postMessage(
+                'authorization:${content.provider}:success:${JSON.stringify(content)}',
+                message.origin
+              );
+              window.removeEventListener("message", receiveMessage, false);
+            }
+            window.addEventListener("message", receiveMessage, false);
+            window.opener.postMessage("authorizing:${content.provider}", "*");
+          </script>
+        `;
 
-        // Return success response with token
-        return callbackScriptResponse('success', body.access_token);
-
+        return new NextResponse(script, {
+            status: 200,
+            headers: { "Content-Type": "text/html" },
+        });
     } catch (err) {
-        console.error('OAuth callback error:', err);
-        const errorMessage = err instanceof Error ? err.message : 'Unknown error';
-        return callbackScriptResponse('error', JSON.stringify({ error: errorMessage }));
+        return new NextResponse('<script>window.close();</script>', {
+            status: 500,
+            headers: { "Content-Type": "text/html" },
+        });
     }
-}
+} 
