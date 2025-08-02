@@ -29,6 +29,7 @@ collections:
                 widget: "list"
                 summary: "{{fields}}"
                 field:
+                  name: "point"
                   widget: "string"
           - label: "Awards and Recognition"
             name: "awardsAndRecognition"
@@ -40,6 +41,7 @@ collections:
                 widget: "list"
                 summary: "{{fields}}"
                 field:
+                  name: "point"
                   widget: "string"
           # - { label: "Headline", name: "headline", widget: "string" }
           # - { label: "Description", name: "description", widget: "text" }
