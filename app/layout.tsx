@@ -62,7 +62,7 @@ export default function RootLayout({
           </div>
         <main 
         style={{
-          margin: "0 200px"
+          marginLeft: "10vw"
         }}
         className="flex-auto min-w-0 mt-6 flex flex-col px-2">
           {children}

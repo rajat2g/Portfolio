@@ -17,34 +17,58 @@ collections:
         label: "Home Page"
         name: "home"
         fields:
-          - { label: "Headline", name: "headline", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Writing", name: "writing", widget: "list", fields: [
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Date", name: "date", widget: "string" },
-              { label: "Link", name: "link", widget: "string" },
-              { label: "Description", name: "description", widget: "text" }
-            ] }
-          - { label: "Speaking", name: "speaking", widget: "list", fields: [
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Date", name: "date", widget: "string" },
-              { label: "Link", name: "link", widget: "string" },
-              { label: "Description", name: "description", widget: "text" }
-            ] }
-          - { label: "Publications", name: "publications", widget: "list", fields: [
-              { label: "Title", name: "title", widget: "string" },
-              { label: "Date", name: "date", widget: "string" },
-              { label: "Link", name: "link", widget: "string" },
-              { label: "Description", name: "description", widget: "text" }
-            ] }
-          - { label: "Research", name: "research", widget: "text" }
-          - label: "Contact"
-            name: "contact"
-            widget: "object"
+          - { label: "Punchline 1", name: "punchline1", widget: "string" }
+          - { label: "Punchline 2", name: "punchline2", widget: "string" }
+          - label: "Featured Project"
+            name: "featuredProject"
+            widget: "list"
             fields:
-              - { label: "Email", name: "email", widget: "string" }
-              - { label: "Twitter", name: "twitter", widget: "string" }
-              - { label: "LinkedIn", name: "linkedin", widget: "string" } 
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                summary: "{{fields}}"
+                field:
+                  widget: "string"
+          - label: "Awards and Recognition"
+            name: "awardsAndRecognition"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                summary: "{{fields}}"
+                field:
+                  widget: "string"
+          # - { label: "Headline", name: "headline", widget: "string" }
+          # - { label: "Description", name: "description", widget: "text" }
+          # - { label: "Writing", name: "writing", widget: "list", fields: [
+          #     { label: "Title", name: "title", widget: "string" },
+          #     { label: "Date", name: "date", widget: "string" },
+          #     { label: "Link", name: "link", widget: "string" },
+          #     { label: "Description", name: "description", widget: "text" }
+          #   ] }
+          # - { label: "Speaking", name: "speaking", widget: "list", fields: [
+          #     { label: "Title", name: "title", widget: "string" },
+          #     { label: "Date", name: "date", widget: "string" },
+          #     { label: "Link", name: "link", widget: "string" },
+          #     { label: "Description", name: "description", widget: "text" }
+          #   ] }
+          # - { label: "Publications", name: "publications", widget: "list", fields: [
+          #     { label: "Title", name: "title", widget: "string" },
+          #     { label: "Date", name: "date", widget: "string" },
+          #     { label: "Link", name: "link", widget: "string" },
+          #     { label: "Description", name: "description", widget: "text" }
+          #   ] }
+          # - { label: "Research", name: "research", widget: "text" }
+          # - label: "Contact"
+          #   name: "contact"
+          #   widget: "object"
+          #   fields:
+          #     - { label: "Email", name: "email", widget: "string" }
+          #     - { label: "Twitter", name: "twitter", widget: "string" }
+          #     - { label: "LinkedIn", name: "linkedin", widget: "string" } 
 
   - name: "cv"
     label: "Curriculum Vitae"

@@ -1,4 +1,23 @@
 ---
+punchline1: UCA award-winning tunneling engineer blending innovation, safety, and impact.
+punchline2: Recognized for advancing tunnel design through technical excellence and practical solutions.
+featuredProject:
+  - title: "West Seattle Ballard Link Extension (WSBLE), Seattle, WA, USA"
+    details:
+      - "Interpreted geotechnical and hydrogeological data to inform tunnel design."
+      - "Reviewed GIRs and GERs to assess subsurface conditions."
+      - "Conducted stability and buoyancy analyses for station structures."
+      - "Developed FEM-based constitutive models to evaluate tunneling impacts on infrastructure."
+      - "Assessed effects of tunneling on ~800 existing facilities."
+      - "Evaluated SOE designs for stations and cut-cover portals."
+      - "Reviewed and optimized vertical alignment for cost-effective design."
+awardsAndRecognition:
+  - title: "Underground Construction Association (UCA) Young Member Award, 2024"
+    details:
+      - "Award for outstanding contributions to the tunneling community, demonstrating exceptional technical accomplishments, innovative ideas, and a commitment to improving industry practices."
+      - "Recognized for driving technical and commercial success, advocating for safety, and making tangible differences in the field."
+---
+<!-- ---
 headline: Rajat's Portfolio
 description: "I am a geotechnical and tunneling engineer with national and
   international design and construction support experience for tunnels and
@@ -67,4 +86,4 @@ contact:
   email: your.email@example.com
   twitter: https://twitter.com/yourusername
   linkedin: https://linkedin.com/in/yourusername
----
+--- -->

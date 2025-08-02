@@ -3,28 +3,21 @@ import fs from 'fs';
 import path from 'path';
 
 // Type definitions
-
-type WritingItem = {
+type FeaturedProjectItem = {
   title: string;
-  date: string;
-  link: string;
-  description: string;
+  details: string[];
 };
-type SpeakingItem = WritingItem;
-type PublicationItem = WritingItem;
-type Contact = {
-  email: string;
-  twitter: string;
-  linkedin: string;
+
+type AwardItem = {
+  title: string;
+  details?: string[];
 };
+
 type HomeContent = {
-  headline: string;
-  description: string;
-  writing: WritingItem[];
-  speaking: SpeakingItem[];
-  publications: PublicationItem[];
-  research: string;
-  contact: Contact;
+  punchline1: string;
+  punchline2: string;
+  featuredProject: FeaturedProjectItem[];
+  awardsAndRecognition?: AwardItem[];
 };
 
 function getHomeContent(): HomeContent {
@@ -34,7 +27,6 @@ function getHomeContent(): HomeContent {
   let content: Partial<HomeContent> = {};
   if (match) {
     const frontmatter = match[1];
-    // Use a YAML parser for robust parsing
     const yaml = require('js-yaml');
     Object.assign(content, yaml.load(frontmatter));
   }
@@ -42,251 +34,82 @@ function getHomeContent(): HomeContent {
 }
 
 export default function Home() {
-  const { headline, description, writing, speaking, publications, research, contact } = getHomeContent();
+  const { punchline1, punchline2, featuredProject, awardsAndRecognition } = getHomeContent();
+  
   return (
     <section>
-      <h1 style={{
-        fontSize:  "28px"
-      }} className="mb-8 tracking-tighter"><span style={{ color: "rgb(128, 128, 128)" }}>Hello, I'm</span> Rajat Gangrade.</h1>
+      <h1 className="mb-8 tracking-tighter text-[28px]">
+        <span className="text-gray-500">Hello, I'm</span> Rajat Gangrade.
+      </h1>
       
-      <p className="text-[24px] mb-8 text-neutral-800 dark:text-neutral-200">
-        UCA award-winning tunneling engineer blending innovation, safety, and impact.
+      <p className="text-[24px] mb-8 text-neutral-800">
+        {punchline1}
       </p>
       
-      <p className="text-[24px] text-neutral-800 dark:text-neutral-200">
-        Recognized for advancing tunnel design through technical excellence and practical solutions.
+      <p className="text-[24px] text-neutral-800">
+        {punchline2}
       </p>
       
-      {/* Project Section */}
-      <div style={{ marginTop: '48px', marginBottom: '48px' }}>
-        <h2 style={{
-          fontSize: '24px',
-          fontWeight: '600',
-          color: 'rgb(51, 51, 51)'
-        }} className="dark:text-neutral-200">
+      {/* Featured Project Section */}
+      <div className="my-12">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6">
           Featured Project
         </h2>
         
-        <div style={{
-          borderRadius: '8px',
-          padding: '24px',
-          marginBottom: '16px'
-        }} className="dark:bg-neutral-900 dark:border-neutral-800">
-          <h3 style={{
-            fontSize: '20px',
-            fontWeight: '600',
-            marginBottom: '12px',
-            color: 'rgb(51, 51, 51)'
-          }} className="dark:text-neutral-200">
-            West Seattle Ballard Link Extension (WSBLE), Seattle, WA, USA
-          </h3>
-          
-          <ul style={{
-            listStyle: 'none',
-            padding: '0',
-            margin: '0'
-          }}>
-            <li style={{
-              marginBottom: '8px',
-              paddingLeft: '16px',
-              position: 'relative',
-              color: 'rgb(51, 51, 51)',
-              fontSize: '16px',
-              lineHeight: '1.5'
-            }} className="dark:text-neutral-200">
-              <span style={{
-                position: 'absolute',
-                left: '0',
-                color: 'rgb(128, 128, 128)'
-              }}>•</span>
-              Interpreted geotechnical and hydrogeological data to inform tunnel design.
-            </li>
-            <li style={{
-              marginBottom: '8px',
-              paddingLeft: '16px',
-              position: 'relative',
-              color: 'rgb(51, 51, 51)',
-              fontSize: '16px',
-              lineHeight: '1.5'
-            }} className="dark:text-neutral-200">
-              <span style={{
-                position: 'absolute',
-                left: '0',
-                color: 'rgb(128, 128, 128)'
-              }}>•</span>
-              Reviewed GIRs and GERs to assess subsurface conditions.
-            </li>
-            <li style={{
-              marginBottom: '8px',
-              paddingLeft: '16px',
-              position: 'relative',
-              color: 'rgb(51, 51, 51)',
-              fontSize: '16px',
-              lineHeight: '1.5'
-            }} className="dark:text-neutral-200">
-              <span style={{
-                position: 'absolute',
-                left: '0',
-                color: 'rgb(128, 128, 128)'
-              }}>•</span>
-              Conducted stability and buoyancy analyses for station structures.
-            </li>
-            <li style={{
-              marginBottom: '8px',
-              paddingLeft: '16px',
-              position: 'relative',
-              color: 'rgb(51, 51, 51)',
-              fontSize: '16px',
-              lineHeight: '1.5'
-            }} className="dark:text-neutral-200">
-              <span style={{
-                position: 'absolute',
-                left: '0',
-                color: 'rgb(128, 128, 128)'
-              }}>•</span>
-              Developed FEM-based constitutive models to evaluate tunneling impacts on infrastructure.
-            </li>
-            <li style={{
-              marginBottom: '8px',
-              paddingLeft: '16px',
-              position: 'relative',
-              color: 'rgb(51, 51, 51)',
-              fontSize: '16px',
-              lineHeight: '1.5'
-            }} className="dark:text-neutral-200">
-              <span style={{
-                position: 'absolute',
-                left: '0',
-                color: 'rgb(128, 128, 128)'
-              }}>•</span>
-              Assessed effects of tunneling on ~800 existing facilities.
-            </li>
-            <li style={{
-              marginBottom: '8px',
-              paddingLeft: '16px',
-              position: 'relative',
-              color: 'rgb(51, 51, 51)',
-              fontSize: '16px',
-              lineHeight: '1.5'
-            }} className="dark:text-neutral-200">
-              <span style={{
-                position: 'absolute',
-                left: '0',
-                color: 'rgb(128, 128, 128)'
-              }}>•</span>
-              Evaluated SOE designs for stations and cut-cover portals.
-            </li>
-            <li style={{
-              marginBottom: '0',
-              paddingLeft: '16px',
-              position: 'relative',
-              color: 'rgb(51, 51, 51)',
-              fontSize: '16px',
-              lineHeight: '1.5'
-            }} className="dark:text-neutral-200">
-              <span style={{
-                position: 'absolute',
-                left: '0',
-                color: 'rgb(128, 128, 128)'
-              }}>•</span>
-              Reviewed and optimized vertical alignment for cost-effective design.
-            </li>
-          </ul>
+        <div className="rounded-lg p-6">
+          {featuredProject.map((project, index) => (
+            <div key={index}>
+              <h3 className="text-xl font-semibold mb-3 text-gray-800">
+                {project.title}
+              </h3>
+              <ul className="list-none p-0 m-0">
+                {project.details.map((point, pointIndex) => (
+                  <li 
+                    key={pointIndex}
+                    className="mb-2 pl-4 relative text-gray-800 text-base leading-relaxed"
+                  >
+                    <span className="absolute left-0 text-gray-500">•</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
       
-      {/* Awards Section */}
-      <div style={{ marginTop: '48px', marginBottom: '48px' }}>
-        <h2 style={{
-          fontSize: '24px',
-          fontWeight: '600',
-          marginBottom: '0px',
-          color: 'rgb(51, 51, 51)'
-        }} className="dark:text-neutral-200">
-          Awards & Recognition
-        </h2>
-        
-        <div style={{
-          borderRadius: '8px',
-          padding: '24px'
-        }} className="dark:bg-neutral-900 dark:border-neutral-800">
-          <h3 style={{
-            fontSize: '20px',
-            fontWeight: '600',
-            marginBottom: '16px',
-            color: 'rgb(51, 51, 51)'
-          }} className="dark:text-neutral-200">
-            Underground Construction Association (UCA) Young Member Award, 2024
-          </h3>
-          
-          <p style={{
-            marginBottom: '16px',
-            color: 'rgb(51, 51, 51)',
-            fontSize: '16px',
-            lineHeight: '1.6'
-          }} className="dark:text-neutral-200">
-            Award for outstanding contributions to the tunneling community, demonstrating exceptional technical accomplishments, innovative ideas, and a commitment to improving industry practices.
-          </p>
-          
-          <p style={{
-            marginBottom: '0',
-            color: 'rgb(51, 51, 51)',
-            fontSize: '16px',
-            lineHeight: '1.6'
-          }} className="dark:text-neutral-200">
-            Recognized for driving technical and commercial success, advocating for safety, and making tangible differences in the field.
-          </p>
-        </div>
-      </div>
-      
-      {/* <p className="mb-4">{description}</p> */}
-      {/* <div className="my-8 grid gap-16">
-        <div>
-          <h2 className="text-xl font-bold mb-4">📝 Recent Writing</h2>
-          <ul>
-            {writing && writing.map((item) => (
-              <li key={item.link} className="mb-4">
-                <a href={item.link} className="text-lg font-semibold hover:underline">{item.title}</a>
-                <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
-              </li>
+      {/* Awards & Recognition Section */}
+      {awardsAndRecognition && awardsAndRecognition.length > 0 && (
+        <div className="my-12">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            Awards & Recognition
+          </h2>
+          <div className="rounded-lg p-6">
+            {awardsAndRecognition.map((award, index) => (
+              <div key={index} className={index !== awardsAndRecognition.length - 1 ? 'mb-8' : ''}>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                  {award.title}
+                </h3>
+                {award.details && Array.isArray(award.details) && (
+                  <ul className="list-none p-0 m-0">
+                    {award.details.map((detail, detailIndex) => (
+                      <li
+                        key={detailIndex}
+                        className={`pl-4 relative text-gray-800 text-base leading-relaxed ${
+                          detailIndex !== award.details!.length - 1 ? 'mb-2' : ''
+                        }`}
+                      >
+                        <span className="absolute left-0 text-gray-500">•</span>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold mb-4">🗣️ Recent Speaking</h2>
-          <ul>
-            {speaking && speaking.map((item) => (
-              <li key={item.link} className="mb-4">
-                <a href={item.link} className="text-lg font-semibold hover:underline" target="_blank" rel="noopener noreferrer">{item.title}</a>
-                <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold mb-4">📚 Recent Publications</h2>
-          <ul>
-            {publications && publications.map((item) => (
-              <li key={item.link} className="mb-4">
-                <a href={item.link} className="text-lg font-semibold hover:underline" target="_blank" rel="noopener noreferrer">{item.title}</a>
-                <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold mb-4">🔬 Research Interests</h2>
-          <div className="text-neutral-800 dark:text-neutral-200 whitespace-pre-line">{research}</div>
-        </div>
-        <div>
-          <h2 className="text-xl font-bold mb-4">📬 Get in Touch</h2>
-          <div className="flex gap-6">
-            <a href={`mailto:${contact.email}`} className="text-link-primary hover:text-link-hover transition-colors">Email</a>
-            <a href={contact.twitter} className="text-link-primary hover:text-link-hover transition-colors" target="_blank" rel="noopener noreferrer">Twitter</a>
-            <a href={contact.linkedin} className="text-link-primary hover:text-link-hover transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
-      </div> */}
+      )}
     </section>
   );
 } 
