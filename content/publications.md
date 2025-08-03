@@ -87,6 +87,12 @@ publications:
     link: https://www.researchgate.net/publication/338844114_Probabilistic_Subsurface_Modelling_in_Tunnelling_Applications_Suggestions_for_Use_in_Practice
     date: "2020"
     description: Presented at the World Tunnel Congress in Malaysia, KL
+  - title: Evaluation of geological/geotechnical geostatistical models for tunneling
+      applications
+    date: "2020"
+    link: https://www.researchgate.net/publication/338844002_Evaluation_of_geologicalgeotechnical_geostatistical_models_for_tunneling_applications
+    description: Presented at the 10th international symposium on geotechnical
+      aspects of underground construction in soft ground in UK
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
