@@ -77,6 +77,11 @@ publications:
     description: Presented at the 54th US Rock Mechanics symposium at Golden, CO
     link: https://www.researchgate.net/publication/343995601_Probabilistic_Assessment_of_Void_Frequency_in_Karstic_Geologic_Formation
     date: "2020"
+  - title: Incorporating spatial uncertainty into site-investigations for tunneling
+      applications
+    date: "2020"
+    description: Presented at the ASCE GeoCongress in Minneapolis, MN
+    link: https://www.researchgate.net/publication/338844121_Incorporating_Spatial_Uncertainty_into_Site-Investigations_for_Tunneling_Applications
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
