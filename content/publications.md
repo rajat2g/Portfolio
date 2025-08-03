@@ -35,11 +35,11 @@ publications:
     date: "2023"
     link: https://www.researchgate.net/publication/370540708_Capturing_soil_transition_location_uncertainty_in_TBM_tunnelling
     description: Presented at the World Tunnel Congress in Athens, Greece
-  - title: Digital Transformation in Healthcare Organizations
-    date: "2021"
-    link: https://example.com/paper7
-    description: Case studies of successful digital transformation initiatives in
-      healthcare.
+  - title: Methods to reduce geotechnical uncertainty and risk using big data
+      collected during construction
+    date: "2023"
+    link: https://www.researchgate.net/publication/369483289_Methods_to_Reduce_Geotechnical_Uncertainty_and_Risk_Using_Big_Data_Collected_during_Construction
+    description: Presented at the ASCE GeoCongress
   - title: Innovation Networks and Knowledge Sharing
     date: "2020"
     link: https://example.com/paper8
