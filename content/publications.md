@@ -62,6 +62,12 @@ publications:
     link: https://link.springer.com/article/10.1007/s00603-021-02528-6
     date: "2022"
     description: "Research published in the Journal of Rock Mechanics and Rock Engineering "
+  - title: Evaluation of geological/geotechnical geostatistical models for tunneling
+      applications
+    date: "2021"
+    link: https://www.taylorfrancis.com/chapters/edit/10.1201/9780429321559-5/evaluation-geological-geotechnical-geostatistical-models-tunneling-applications-gangrade-trainor-guitton-mooney-grasmick
+    description: Presented at the Geotechnical aspects of underground construction
+      in soft ground at Cambridge, UK
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
