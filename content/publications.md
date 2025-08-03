@@ -31,10 +31,10 @@ publications:
     date: "2023"
     link: https://www.researchgate.net/publication/370546757_Generating_a_digital_twin_for_tunneling_projects_during_the_construction_phase
     description: Presented at the World Tunnel Congress in Athens, Greece
-  - title: Ethics in AI Decision-Making Systems
-    date: "2021"
-    link: https://example.com/paper6
-    description: A framework for ethical considerations in automated decision systems.
+  - title: Capturing soil transition location uncertainty in TBM tunnelling
+    date: "2023"
+    link: https://www.researchgate.net/publication/370540708_Capturing_soil_transition_location_uncertainty_in_TBM_tunnelling
+    description: Presented at the World Tunnel Congress in Athens, Greece
   - title: Digital Transformation in Healthcare Organizations
     date: "2021"
     link: https://example.com/paper7
