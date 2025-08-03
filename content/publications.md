@@ -111,10 +111,10 @@ research_areas:
       Developing workflows and methodologies to adapt to digital technologies
       and the strategic frameworks that enable digital transformation."
   - area: "AI Applications in Tunneling: Developing integrated AI systems to improve
-      tunnel construction efficiency and support proactive risk management"
-  - area: "Leadership & Innovation: Studying leadership practices that foster
-      innovation and effective communication in modern, technology-enabled
-      organizations."
+      tunnel construction efficiency and support proactive risk management."
+  - area: "Tunnel Boring Machine (TBM) and Ground Interaction: Investigating the
+      complex mechanical and physical processes occurring between TBM and the
+      surrounding ground."
   - area: "Human-Computer Interaction: Researching how humans interact with
       technology systems and the design principles that optimize these
       interactions."
