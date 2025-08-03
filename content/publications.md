@@ -26,11 +26,11 @@ publications:
     date: "2023"
     link: https://www.researchgate.net/publication/370548871_Methods_for_local_big_data_integration_to_reduce_geotechnical_uncertainty_and_risk_on_subsurface_infrastructure_projects
     description: Presented at the World Tunnel Congress in Athens, Greece
-  - title: "The Future of Work: Technology and Human Collaboration"
-    date: "2022"
-    link: https://example.com/paper5
-    description: Examining how technology shapes the future workplace and human
-      collaboration.
+  - title: Generating a digital twin for tunneling projects during the construction
+      phase
+    date: "2023"
+    link: https://www.researchgate.net/publication/370546757_Generating_a_digital_twin_for_tunneling_projects_during_the_construction_phase
+    description: Presented at the World Tunnel Congress in Athens, Greece
   - title: Ethics in AI Decision-Making Systems
     date: "2021"
     link: https://example.com/paper6
