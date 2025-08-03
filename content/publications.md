@@ -40,10 +40,11 @@ publications:
     date: "2023"
     link: https://www.researchgate.net/publication/369483289_Methods_to_Reduce_Geotechnical_Uncertainty_and_Risk_Using_Big_Data_Collected_during_Construction
     description: Presented at the ASCE GeoCongress in Los Angeles, CA
-  - title: Innovation Networks and Knowledge Sharing
-    date: "2020"
-    link: https://example.com/paper8
-    description: How innovation networks facilitate knowledge transfer across organizations.
+  - title: Probabilistic assessment of tunnel face stability considering ground
+      variability for closed-face EPB TBM
+    date: "2022"
+    link: https://www.researchgate.net/publication/364055092_Probabilistic_Assessment_of_Tunnel_Face_Stability_Considering_Ground_Variability_for_Closed-Face_EPB_TBM
+    description: Presented at the Tunnelling Association of Canada
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
