@@ -110,9 +110,8 @@ research_areas:
   - area: "Digital First Strategy for Tunneling and Geotechnical Engineering:
       Developing workflows and methodologies to adapt to digital technologies
       and the strategic frameworks that enable digital transformation."
-  - area: "AI Ethics & Society: Exploring the ethical implications of artificial
-      intelligence systems and their impact on society and human
-      decision-making."
+  - area: "AI Applications in Tunneling: Developing integrated AI systems to improve
+      tunnel construction efficiency and support proactive risk management"
   - area: "Leadership & Innovation: Studying leadership practices that foster
       innovation and effective communication in modern, technology-enabled
       organizations."
