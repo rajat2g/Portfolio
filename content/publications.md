@@ -68,6 +68,15 @@ publications:
     link: https://www.taylorfrancis.com/chapters/edit/10.1201/9780429321559-5/evaluation-geological-geotechnical-geostatistical-models-tunneling-applications-gangrade-trainor-guitton-mooney-grasmick
     description: Presented at the Geotechnical aspects of underground construction
       in soft ground at Cambridge, UK
+  - title: EPB shield tunnel boring machine automation using the autonomous-vehicle
+      framework
+    date: "2020"
+    description: Presented at the North American Tunneling Conference at Nashville, TN
+    link: https://www.researchgate.net/publication/343996122_EPB_Shield_Tunnel_Boring_Machine_Automation_using_the_Autonomous-Vehicle_Framework
+  - title: Probabilistic assessment of void frequency in karstic geologic formation
+    description: Presented at the 54th US Rock Mechanics symposium at Golden, CO
+    link: https://www.researchgate.net/publication/343995601_Probabilistic_Assessment_of_Void_Frequency_in_Karstic_Geologic_Formation
+    date: "2020"
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
