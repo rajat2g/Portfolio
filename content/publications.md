@@ -115,7 +115,6 @@ research_areas:
   - area: "Tunnel Boring Machine (TBM) and Ground Interaction: Investigating the
       complex mechanical and physical processes occurring between TBM and the
       surrounding ground."
-  - area: "Human-Computer Interaction: Researching how humans interact with
-      technology systems and the design principles that optimize these
-      interactions."
+  - area: "Back-Analysis of Tunnel Construction Data: Investigating the construction
+      data to optimize and calibrate designs - Win more projects!"
 ---
