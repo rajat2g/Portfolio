@@ -39,7 +39,7 @@ publications:
       collected during construction
     date: "2023"
     link: https://www.researchgate.net/publication/369483289_Methods_to_Reduce_Geotechnical_Uncertainty_and_Risk_Using_Big_Data_Collected_during_Construction
-    description: Presented at the ASCE GeoCongress
+    description: Presented at the ASCE GeoCongress in Los Angeles, CA
   - title: Innovation Networks and Knowledge Sharing
     date: "2020"
     link: https://example.com/paper8
