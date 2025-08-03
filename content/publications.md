@@ -98,6 +98,10 @@ publications:
     date: "2020"
     description: Presented at the World Tunnel Congress in Malaysia, KL
     link: https://www.researchgate.net/publication/338843901_An_Integrated_Framework_to_Optimize_Site-Investigations_for_Tunneling_Applications
+  - title: How uncertain are the geological-geotechnical soil transition boundaries?
+    date: "2020"
+    description: Presented at the North American Tunneling Conference in Nashville, TN
+    link: https://www.researchgate.net/publication/338843807_How_Uncertain_Are_the_Geological-Geotechnical_Soil_Transition_Boundaries
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
