@@ -82,6 +82,11 @@ publications:
     date: "2020"
     description: Presented at the ASCE GeoCongress in Minneapolis, MN
     link: https://www.researchgate.net/publication/338844121_Incorporating_Spatial_Uncertainty_into_Site-Investigations_for_Tunneling_Applications
+  - title: "Probabilistic subsurface modelling in tunnelling applications:
+      Suggestions for use in practice"
+    link: https://www.researchgate.net/publication/338844114_Probabilistic_Subsurface_Modelling_in_Tunnelling_Applications_Suggestions_for_Use_in_Practice
+    date: "2020"
+    description: Presented at the World Tunnel Congress in Malaysia, KL
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
