@@ -107,9 +107,9 @@ publications:
     description: Presented at the North American Tunneling Conference in Nashville, TN
     link: https://www.researchgate.net/publication/338843807_How_Uncertain_Are_the_Geological-Geotechnical_Soil_Transition_Boundaries
 research_areas:
-  - area: "Digital Transformation: Investigating how organizations adapt to digital
-      technologies and the strategic frameworks that enable successful
-      transformation."
+  - area: "Digital First Strategy for Tunneling and Geotechnical Engineering:
+      Developing workflows and methodologies to adapt to digital technologies
+      and the strategic frameworks that enable digital transformation."
   - area: "AI Ethics & Society: Exploring the ethical implications of artificial
       intelligence systems and their impact on society and human
       decision-making."
