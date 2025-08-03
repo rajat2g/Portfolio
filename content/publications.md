@@ -45,6 +45,23 @@ publications:
     date: "2022"
     link: https://www.researchgate.net/publication/364055092_Probabilistic_Assessment_of_Tunnel_Face_Stability_Considering_Ground_Variability_for_Closed-Face_EPB_TBM
     description: Presented at the Tunnelling Association of Canada
+  - title: Risk-based methodology to optimize geotechnical site investigations in
+      tunnel projects
+    date: "2022"
+    link: https://www.sciencedirect.com/science/article/abs/pii/S0886779822002292
+    description: Research published in the Tunnelling and Underground Space
+      Technology Journal
+  - title: Quantification of stratigraphic transition location uncertainty for
+      tunneling projects
+    description: "Research published in the ASCE Journal of Geotechnical and
+      Geo-Environmental Engineering "
+    date: "2022"
+    link: https://ascelibrary.org/doi/10.1061/%28ASCE%29GT.1943-5606.0002815
+  - title: Probabilistic assessment of void risk and grouting volume for tunneling
+      applications
+    link: https://link.springer.com/article/10.1007/s00603-021-02528-6
+    date: "2022"
+    description: "Research published in the Journal of Rock Mechanics and Rock Engineering "
 research_areas:
   - area: "Digital Transformation: Investigating how organizations adapt to digital
       technologies and the strategic frameworks that enable successful
