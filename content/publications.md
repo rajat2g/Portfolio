@@ -21,15 +21,15 @@ publications:
     link: https://www.researchgate.net/publication/379535432_De-Risking_Soft_Ground_Tunnel_Projects_with_Optimized_Investigations
     description: "Presented at Associated Research Centers for the Urban Underground
       Space (ACUUS) in Singapore "
-  - title: Methods for local big data integration to reduce geotechnical uncertainty
-      and risk on subsurface infrastructure projects
-    date: "2023"
-    link: https://www.researchgate.net/publication/370548871_Methods_for_local_big_data_integration_to_reduce_geotechnical_uncertainty_and_risk_on_subsurface_infrastructure_projects
-    description: Presented at the World Tunnel Congress in Athens, Greece
   - title: Generating a digital twin for tunneling projects during the construction
       phase
     date: "2023"
     link: https://www.researchgate.net/publication/370546757_Generating_a_digital_twin_for_tunneling_projects_during_the_construction_phase
+    description: Presented at the World Tunnel Congress in Athens, Greece
+  - title: Methods for local big data integration to reduce geotechnical uncertainty
+      and risk on subsurface infrastructure projects
+    date: "2023"
+    link: https://www.researchgate.net/publication/370548871_Methods_for_local_big_data_integration_to_reduce_geotechnical_uncertainty_and_risk_on_subsurface_infrastructure_projects
     description: Presented at the World Tunnel Congress in Athens, Greece
   - title: Capturing soil transition location uncertainty in TBM tunnelling
     date: "2023"
