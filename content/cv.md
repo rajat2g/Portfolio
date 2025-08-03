@@ -105,30 +105,49 @@ experience:
     years: 2017-2021
 publications: []
 awards:
-  - award: Outstanding Research Award
+  - award: "UCA Young Member Award "
+    year: "2024"
+    details: >
+      Awarded the prestigious Underground Construction Association Young Member
+      across the North American Tunneling community for outstanding
+      contributions to the tunneling community, demonstrating exceptional
+      technical accomplishments, innovative ideas, and a commitment to improving
+      industry practices. Recognized for driving technical and commercial
+      success, advocating for safety, and making tangible differences in the
+      field.
+  - award: Finalist in the Harding Prize Competition
     year: "2023"
-    details: Technology Research Institute
-  - award: Best Paper Award
-    year: "2022"
-    details: International Conference on AI Ethics
-  - award: Young Researcher Fellowship
-    year: "2019"
-    details: National Science Foundation
+    details: The Harding Prize competition is named in honor of Sir Harold Harding,
+      the founding Chairman of the British Tunneling Society. Novel research on
+      “De-Risking Soft Ground Tunnel Projects” received recognition and a
+      publication in the Tunnels and Tunneling International Magazine.
+  - award: Research Excellence, Graduate Student Symposium, Colorado School of Mines
+    year: 2019-2021
+    details: >
+      Achieved consecutive wins at the Graduate Student Symposium for Research
+      Excellence, demonstrating consistent and exceptional research
+      contributions in the field. Recognized for outstanding academic
+      achievements and novel research methodologies for geotechnical and
+      tunneling applications.
+  - award: UCA Executive Scholarship
+    year: 2018, 2021
+    details: >
+      Recognition from the UCA for exceptional academic achievements and
+      extensive professional experience in tunneling, globally. The scholarship
+      reflected strong dedication to the field of underground construction
+      showcasing expertise, leadership, and contributions to industry’s
+      advancement.
 skills:
   - category: Research Methods
     items:
       - skill: Quantitative and qualitative research
-      - skill: Longitudinal studies
-      - skill: Statistical analysis
+      - Statistical analysis and probabilistic methods
       - skill: Data science and machine learning
   - category: Technical Skills
     items:
       - skill: Python
       - skill: R
-      - skill: JavaScript
-      - skill: Machine Learning frameworks
       - skill: Data visualization
-      - skill: Cloud computing platforms
 service:
   - role: "Vice Chair "
     organization: Underground Construction Association Working Group 20
