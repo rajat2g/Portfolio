@@ -141,7 +141,7 @@ skills:
   - category: Research Methods
     items:
       - skill: Quantitative and qualitative research
-      - Statistical analysis and probabilistic methods
+      - Statistical analysis
       - skill: Data science and machine learning
   - category: Technical Skills
     items:
