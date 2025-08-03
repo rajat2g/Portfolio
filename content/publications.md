@@ -62,6 +62,10 @@ publications:
     link: https://link.springer.com/article/10.1007/s00603-021-02528-6
     date: "2022"
     description: "Research published in the Journal of Rock Mechanics and Rock Engineering "
+  - title: The application of artificial intelligence (AI) to improve TBM operations
+    date: "2021"
+    description: Presented at the Rapid Excavation Tunneling Conference in Las Vegas, NV
+    link: https://tunnelingonline.com/tunneling-industry-reconvenes-at-retc-2021/
   - title: Evaluation of geological/geotechnical geostatistical models for tunneling
       applications
     date: "2021"
