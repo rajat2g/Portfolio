@@ -9,24 +9,23 @@ publications:
       considering spatial variability
     date: "2025"
     link: https://www.researchgate.net/publication/391580591_Probabilistic_assessment_of_large_diameter_tunnel_face_stability_considering_spatial_variability
-    description: Investigating the reduction in TBM operational range due to
-      variability in geotechnical parameters.
-  - title: Risk-based methodology to optimize geotechnical site investigations in
-      tunnel projects
-    date: "2022"
-    link: https://example.com/paper1
-    description: A systematic approach to digital transformation strategy in large
-      organizations.
-  - title: Human-Centered Design in AI Systems
+    description: Presented at the World Tunnel Congress in Stockholm, Sweden
+  - title: Risk guided strategy to optimize geotechnical investigations on tunnel
+      projects
+    date: "2024"
+    link: https://www.researchgate.net/publication/383540124_Risk_Guided_Strategy_to_Optimize_Geotechnical_Investigations_on_Tunnel_Projects
+    description: "Presented at Associated Research Centers for the Urban Underground
+      Space (ACUUS) in Singapore "
+  - title: De-risking soft ground tunnel projects with optimized investigations
+    date: "2024"
+    link: https://www.researchgate.net/publication/379535432_De-Risking_Soft_Ground_Tunnel_Projects_with_Optimized_Investigations
+    description: "Presented at Associated Research Centers for the Urban Underground
+      Space (ACUUS) in Singapore "
+  - title: Methods for local big data integration to reduce geotechnical uncertainty
+      and risk on subsurface infrastructure projects
     date: "2023"
-    link: https://example.com/paper3
-    description: Exploring the role of human-centered design principles in
-      artificial intelligence development.
-  - title: Leadership Communication in Remote Teams
-    date: "2022"
-    link: https://example.com/paper4
-    description: Strategies for effective leadership communication in distributed
-      work environments.
+    link: https://www.researchgate.net/publication/370548871_Methods_for_local_big_data_integration_to_reduce_geotechnical_uncertainty_and_risk_on_subsurface_infrastructure_projects
+    description: Presented at the World Tunnel Congress in Athens, Greece
   - title: "The Future of Work: Technology and Human Collaboration"
     date: "2022"
     link: https://example.com/paper5
