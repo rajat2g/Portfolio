@@ -1,66 +1,93 @@
 ---
 title: Speaking & Podcasts
-description: Podcast appearances and speaking engagements on technology leadership, digital transformation, and innovation.
+description: Podcast appearances and speaking engagements on quantification of
+  uncertainty and risk in tunneling and underground construction, digital
+  transformation and automation in geotechnical engineering and tunneling, and
+  sustainability aspects in tunneling.
 appearances:
-  - title: "Tech Leadership Podcast: Building High-Performance Teams"
-    date: "Jan 2025"
-    link: "https://example.com/podcast1"
-    host: "Sarah Johnson"
-    description: "Discussing strategies for building and leading high-performance technology teams in the modern workplace."
-  - title: "Innovation Summit: The Future of AI in Business"
-    date: "Dec 2024"
-    link: "https://example.com/podcast2"
-    host: "Innovation Summit 2024"
-    description: "Keynote interview. Exploring practical applications of AI in business strategy and operations."
-  - title: "Digital Transformation Deep Dive"
-    date: "Nov 2024"
-    link: "https://example.com/podcast3"
-    host: "Michael Chen"
-    description: "A comprehensive discussion on digital transformation frameworks and implementation strategies."
-  - title: "The Leadership Edge: Navigating Change"
-    date: "Oct 2024"
-    link: "https://example.com/podcast4"
-    host: "Dr. Lisa Rodriguez"
-    description: "Conversation about leadership principles for navigating organizational change and uncertainty."
-  - title: "Industry Insights Webinar: Technology Trends"
-    date: "Sep 2024"
-    link: "https://example.com/podcast5"
-    host: "Industry Leaders Panel"
-    description: "Panel discussion on emerging technology trends and their business implications."
-  - title: "Startup Stories: From Idea to Scale"
-    date: "Aug 2024"
-    link: "https://example.com/podcast6"
-    host: "David Park"
-    description: "Sharing experiences and lessons learned from building and scaling technology companies."
-  - title: "The Strategy Show: Digital-First Organizations"
-    date: "Jul 2024"
-    link: "https://example.com/podcast7"
-    host: "Amanda Williams"
-    description: "Discussing how organizations can become truly digital-first in their operations and culture."
-  - title: "Future of Work Summit Interview"
-    date: "Jun 2024"
-    link: "https://example.com/podcast8"
-    host: "Future of Work Summit"
-    description: "Live interview. Exploring the evolution of remote work and distributed teams."
+  - title: "Digital First Tunneling: Transforming Data into Decisions"
+    date: "2025"
+    link: https://www.smenet.org/sme-store/webinars
+    host: Underground Construction Association
+    description: Discussing actionable steps for implementing digital workflows that
+      transform fragmented data into cohesive knowledge systems supporting
+      informed decision-making
+  - title: Digital First Approach in Tunneling and Geotechnical Engineering
+    date: "2025"
+    link: https://youtu.be/MHonXqPHZ6E?si=Tf1qrZeLLaPEwNYr
+    host: Digital Construction Podcast
+    description: Discussing opportunities for digital development and automation in
+      the North American tunneling space and global tunneling community space.
+  - title: Addressing ITA-AITES risk management guidelines on quantifying ground
+      uncertainty
+    date: "2025"
+    link: https://example.com/podcast8
+    host: MIT World Peace University, India
+    description: Discussing active risk management on tunneling and underground
+      construction projects
+  - title: Planning cost effective and sustainable geotechnical investigations for
+      tunnel projects
+    date: "2025"
+    link: https://example.com/podcast7
+    host: Underground Construction Association
+    description: Discussing how engineers can plan sustainable and risk-focused
+      geotechnical investigations for tunneling projects supporting UN
+      sustainability goals
+  - title: "Why I Build Beneath: Rajat Gangrade"
+    date: "2023"
+    link: https://youtu.be/sK_2Fq1wfmU?si=_-W6yMZA_ic9Bcb0
+    host: Underground Construction Association
+    description: Discussing about my journey in the North American tunneling industry
+  - title: Validation of probabilistic and artificially intelligent ground models in
+      predicting soil transitions
+    date: "2023"
+    link: https://www.youtube.com/live/SKnHhpvn98Y?si=l1Ga-8FQkWRnLeif
+    host: British Tunneling Society
+    description: A comprehensive discussion on quantifying critical subsurface
+      features such as soil transitions that impact TBM operations and
+      efficiency
+  - title: AI applications in risk assessment for soft ground tunneling projects
+    date: "2023"
+    link: https://youtu.be/XY3bQMVPids?si=2zlw1ZGst_N_AdTF
+    host: Tunneling Association of India
+    description: Comprehensive discussion on using AI driven models to mitigate
+      tunneling risk
+  - title: Probabilistic assessment of void risk and grouting volume for shield
+      tunneling
+    date: "2022"
+    link: https://youtu.be/XaNGRcBgB8k?si=bu1M28pP3wajWZej
+    host: Colorado School of Mines
+    description: Presented the applications of probabilistic methodologies for
+      proactive risk management in tunneling and underground construction
 topics:
-  - topic: "Digital Transformation"
-    description: "Strategic frameworks for organizational digital transformation, technology adoption patterns, and change management best practices."
-  - topic: "Technology Leadership"
-    description: "Building high-performance technology teams, leading through uncertainty, and fostering innovation culture in organizations."
-  - topic: "AI & Ethics"
-    description: "Responsible AI development, ethical considerations in automated systems, and the future of human-AI collaboration."
-  - topic: "Future of Work"
-    description: "Remote work strategies, distributed team management, and the evolution of workplace culture in the digital age."
+  - topic: Digital Transformation
+    description: Strategic frameworks for organizational digital transformation,
+      technology adoption patterns, and change management best practices.
+  - topic: Technology Leadership
+    description: Building high-performance technology teams, leading through
+      uncertainty, and fostering innovation culture in organizations.
+  - topic: AI & Ethics
+    description: Responsible AI development, ethical considerations in automated
+      systems, and the future of human-AI collaboration.
+  - topic: Future of Work
+    description: Remote work strategies, distributed team management, and the
+      evolution of workplace culture in the digital age.
 formats:
-  - format: "Podcast Interviews"
-    description: "Long-form conversations about technology, leadership, and innovation with industry hosts."
-  - format: "Conference Keynotes"
-    description: "Recorded keynote presentations from major industry conferences and summits."
-  - format: "Panel Discussions"
-    description: "Expert panel discussions on emerging trends and industry challenges."
-  - format: "Webinar Sessions"
-    description: "Educational webinars and masterclasses on digital transformation and leadership."
+  - format: Podcast Interviews
+    description: Long-form conversations about technology, leadership, and
+      innovation with industry hosts.
+  - format: Conference Keynotes
+    description: Recorded keynote presentations from major industry conferences and summits.
+  - format: Panel Discussions
+    description: Expert panel discussions on emerging trends and industry challenges.
+  - format: Webinar Sessions
+    description: Educational webinars and masterclasses on digital transformation
+      and leadership.
 inquiries:
-  instructions: "I'm available for speaking engagements, podcast interviews, and panel discussions. I particularly enjoy conversations about technology leadership, innovation, and the human side of digital transformation. For speaking inquiries, please reach out via email with details about your event, audience, and preferred topics."
-  email: "your.email@example.com"
---- 
+  instructions: I'm available for speaking engagements, podcast interviews, and
+    panel discussions. I particularly enjoy conversations about technology
+    leadership, innovation, and the human side of digital transformation. For
+    speaking inquiries, please reach out via email with details about your
+    event, audience, and preferred topics.
+  email: your.email@example.com
+---
