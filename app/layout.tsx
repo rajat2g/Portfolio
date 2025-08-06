@@ -54,17 +54,11 @@ export default function RootLayout({
     >
       <body className="antialiased mb-4">
         <Navbar />
-        <div
-          style={{
-            marginBottom: "200px"
-          }}
-        >
-          </div>
         <main 
         style={{
-          marginLeft: "10vw"
+          margin: "0 10vw"
         }}
-        className="flex-auto min-w-0 mt-6 flex flex-col px-2">
+        >
           {children}
           {/* <Footer />
           <Analytics />

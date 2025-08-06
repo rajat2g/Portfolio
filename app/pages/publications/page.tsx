@@ -38,9 +38,17 @@ function getPublicationsContent(): PublicationsContent {
 export default function PublicationsPage() {
   const { title, description, publications, research_areas } = getPublicationsContent();
   return (
-    <main className="max-w-3xl mx-auto px-4 py-8">
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">{title}</h1>
-      <p className="mb-8 text-lg text-neutral-700 dark:text-neutral-300">{description}</p>
+    <main className="">
+      <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
+      <p className="mb-4 text-lg text-neutral-700 dark:text-neutral-300">{description}</p>
+      <section className="mb-4">
+        <h2 className="text-xl font-bold mb-4">Research Interests</h2>
+        <ul className="list-disc pl-6">
+          {research_areas && research_areas.map((area, idx) => (
+            <li key={idx} className="mb-2 text-neutral-800 dark:text-neutral-200">{area.area}</li>
+          ))}
+        </ul>
+      </section>
       <section className="mb-12">
         <h2 className="text-xl font-bold mb-4">Peer-Reviewed Publications</h2>
         <ul>
@@ -50,14 +58,6 @@ export default function PublicationsPage() {
               <div className="text-sm text-neutral-600">{item.date}</div>
               <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
             </li>
-          ))}
-        </ul>
-      </section>
-      <section>
-        <h2 className="text-xl font-bold mb-4">Research Areas</h2>
-        <ul className="list-disc pl-6">
-          {research_areas && research_areas.map((area, idx) => (
-            <li key={idx} className="mb-2 text-neutral-800 dark:text-neutral-200">{area.area}</li>
           ))}
         </ul>
       </section>

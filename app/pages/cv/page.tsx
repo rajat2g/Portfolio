@@ -68,7 +68,7 @@ export default function CVPage() {
   }
   const { title, description, education, experience, publications, awards, skills, service } = content;
   return (
-    <main className="max-w-2xl mx-auto py-8 px-4">
+    <main className="">
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
       <p className="mb-8 text-neutral-700 dark:text-neutral-300">{description}</p>
       <section className="mb-10">
@@ -96,23 +96,12 @@ export default function CVPage() {
         </ul>
       </section>
       <section className="mb-10">
-        <h2 className="text-xl font-bold mb-4">Selected Publications</h2>
-        <ul>
-          {publications && publications.map((item, idx) => (
-            <li key={idx} className="mb-4">
-              <div className="font-semibold">{item.title} ({item.year})</div>
-              <div className="text-sm text-neutral-600">{item.journal}</div>
-              {item.details && <div className="text-neutral-800 dark:text-neutral-200">{item.details}</div>}
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section className="mb-10">
         <h2 className="text-xl font-bold mb-4">Awards & Recognition</h2>
         <ul>
           {awards && awards.map((item, idx) => (
             <li key={idx} className="mb-4">
-              <div className="font-semibold">{item.award} ({item.year})</div>
+              <div className="font-semibold">{item.award}</div>
+              <div>{item.year}</div>
               {item.details && <div className="text-neutral-800 dark:text-neutral-200">{item.details}</div>}
             </li>
           ))}

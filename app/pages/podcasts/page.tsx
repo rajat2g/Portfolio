@@ -50,7 +50,7 @@ export default function PodcastsPage() {
   }
   const { title, description, appearances, topics, formats, inquiries } = content;
   return (
-    <main className="max-w-2xl mx-auto py-8 px-4">
+    <main className="">
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
       <p className="mb-8 text-neutral-700 dark:text-neutral-300">{description}</p>
       <section className="mb-12">
@@ -60,8 +60,8 @@ export default function PodcastsPage() {
             <li key={idx} className="mb-6">
               <div className="flex flex-col md:flex-row md:items-center md:gap-4">
                 <a href={item.link} className="text-lg font-semibold hover:underline" target="_blank" rel="noopener noreferrer">{item.title}</a>
-                <span className="text-sm text-neutral-500">{item.date}</span>
               </div>
+              <p className="text-sm text-neutral-500">{item.date}</p>
               <div className="text-sm text-neutral-600">Host: {item.host}</div>
               <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
             </li>
@@ -74,16 +74,6 @@ export default function PodcastsPage() {
           {topics && topics.map((item, idx) => (
             <li key={idx} className="mb-2">
               <span className="font-semibold">{item.topic}:</span> {item.description}
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section className="mb-12">
-        <h2 className="text-xl font-bold mb-4">Media Formats</h2>
-        <ul>
-          {formats && formats.map((item, idx) => (
-            <li key={idx} className="mb-2">
-              <span className="font-semibold">{item.format}:</span> {item.description}
             </li>
           ))}
         </ul>

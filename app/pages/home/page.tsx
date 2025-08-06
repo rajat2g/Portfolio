@@ -51,7 +51,7 @@ export default function Home() {
       </p>
       
       {/* Featured Project Section */}
-      <div className="my-12">
+      {/* <div className="my-12">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">
           Featured Project
         </h2>
@@ -76,10 +76,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       
       {/* Awards & Recognition Section */}
-      {awardsAndRecognition && awardsAndRecognition.length > 0 && (
+      {/* {awardsAndRecognition && awardsAndRecognition.length > 0 && (
         <div className="my-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">
             Awards & Recognition
@@ -109,7 +109,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 } 
