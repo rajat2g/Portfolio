@@ -54,10 +54,11 @@ export default function RootLayout({
     >
       <body className="antialiased mb-4">
         <Navbar />
-        <main 
-        style={{
-          margin: "0 10vw"
-        }}
+        <main
+        className='mx-4 sm:mx-16 md:mx-32 lg:mx-40 xl:mx-72'
+          // style={{
+          //   margin: "0 20vw"
+          // }}
         >
           {children}
           {/* <Footer />
