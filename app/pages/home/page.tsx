@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 import fs from 'fs';
 import path from 'path';
+import Image from 'next/image';
 
 // Type definitions
 type FeaturedProjectItem = {
@@ -38,17 +39,24 @@ export default function Home() {
   
   return (
     <section>
-      <h1 className="mb-8 tracking-tighter text-[28px]">
-        <span className="text-gray-500">Hello, I'm</span> Rajat Gangrade.
-      </h1>
-      
-      <p className="text-[24px] mb-8 text-neutral-800">
-        {punchline1}
-      </p>
-      
-      <p className="text-[24px] text-neutral-800">
-        {punchline2}
-      </p>
+      <div style={{alignItems: "center" }} className="flex flex-col md:flex-row items-start md:items-center gap-8">
+        <div>
+          <h1 className="mb-4 tracking-tighter text-[28px]">
+            <span className="text-gray-500">Hello, I'm</span> Rajat Gangrade.
+          </h1>
+          <p className="text-[24px] text-neutral-800">
+            {punchline1}
+          </p>
+        </div>
+          <Image
+            src="/headshot.jpeg"
+            alt="Rajat Gangrade headshot"
+            width={1335}
+            height={1600}
+            priority
+            style={{ width: '230px', height: 'auto' }}
+          />
+      </div>
       
       {/* Featured Project Section */}
       {/* <div className="my-12">

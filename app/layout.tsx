@@ -1,40 +1,7 @@
 import './global.css'
-import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
-import { baseUrl } from './sitemap'
-
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
-  },
-  description: 'This is my portfolio.',
-  openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
-    url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
 
 const cx = (...classes) => classes.filter(Boolean).join(' ')
 
@@ -52,19 +19,78 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <body className="antialiased mb-4">
-        <Navbar />
-        <main
-        className='mx-4 sm:mx-16 md:mx-32 lg:mx-40 xl:mx-72'
-          // style={{
-          //   margin: "0 20vw"
-          // }}
+      <body className="antialiased" style={{ position: "relative" }}>
+        <div 
+          id="top-fancy-line-block"
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            right: "0",
+            borderBottom: "1px solid #e5e5e5",
+            height: "50px",
+            paddingLeft: "4vw",
+            paddingRight: "4vw",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start"
+          }}
+        >
+          {/* <p className='font-semibold hidden sm:block'>Rajat Gangrade</p> */}
+          <Navbar/>
+        </div>
+        <main 
+          className='mx-4 sm:mx-16 md:mx-32 lg:mx-40 xl:mx-72'
+          style={{
+            paddingTop: "50px",
+            paddingBottom: "50px",
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
         >
           {children}
-          {/* <Footer />
-          <Analytics />
-          <SpeedInsights /> */}
         </main>
+        <div 
+          id="bottom-fancy-line-block"
+          style={{
+            height: "50px",
+            position: "absolute",
+            bottom: "0",
+            left: "0",
+            right: "0",
+            zIndex: "100",
+            borderTop: "1px solid #e5e5e5"
+          }}
+        >
+        </div>
+        <div 
+          id="right-fancy-line-block"
+          style={{
+            position: "absolute",
+            bottom: "0",
+            top: "0",
+            right: "0",
+            zIndex: "100",
+            borderLeft: "1px solid #e5e5e5",
+            width: "3vw"
+          }}
+        >
+        </div>
+        <div 
+          id="left-fancy-line-block"
+          style={{
+            position: "absolute",
+            bottom: "0",
+            top: "0",
+            left: "0",
+            zIndex: "100",
+            borderRight: "1px solid #e5e5e5",
+            width: "3vw"
+          }}
+        >
+        </div>
       </body>
     </html>
   )

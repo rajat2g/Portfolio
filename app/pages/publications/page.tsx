@@ -38,7 +38,7 @@ function getPublicationsContent(): PublicationsContent {
 export default function PublicationsPage() {
   const { title, description, publications, research_areas } = getPublicationsContent();
   return (
-    <main className="">
+    <div style={{ marginTop: "2vh" }}>
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
       <p className="mb-4 text-lg text-neutral-700 dark:text-neutral-300">{description}</p>
       <section className="mb-4">
@@ -61,6 +61,6 @@ export default function PublicationsPage() {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 } 

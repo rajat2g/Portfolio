@@ -68,7 +68,7 @@ export default function CVPage() {
   }
   const { title, description, education, experience, publications, awards, skills, service } = content;
   return (
-    <main className="">
+    <div style={{ marginTop: "2vh" }}>
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
       <p className="mb-8 text-neutral-700 dark:text-neutral-300">{description}</p>
       <section className="mb-10">
@@ -134,6 +134,6 @@ export default function CVPage() {
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 } 

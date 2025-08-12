@@ -50,7 +50,7 @@ export default function PodcastsPage() {
   }
   const { title, description, appearances, topics, formats, inquiries } = content;
   return (
-    <main className="">
+    <div style={{ marginTop: "2vh" }}>
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
       <p className="mb-8 text-neutral-700 dark:text-neutral-300">{description}</p>
       <section className="mb-12">
@@ -85,6 +85,6 @@ export default function PodcastsPage() {
           <a href={`mailto:${inquiries.email}`} className="text-link-primary hover:text-link-hover transition-colors">{inquiries.email}</a>
         )}
       </section>
-    </main>
+    </div>
   );
 } 
