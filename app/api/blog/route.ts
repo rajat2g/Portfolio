@@ -5,7 +5,7 @@ const parser = new Parser();
 
 export async function GET() {
   try {
-    const feed = await parser.parseURL('https://kushagra0304.substack.com/feed');
+    const feed = await parser.parseURL('https://rajatgangrade.substack.com/feed');
     
     const posts = feed.items.map(item => ({
       title: item.title || '',
