@@ -1,5 +1,3 @@
-import { baseUrl } from 'app/sitemap'
-
 export default function robots() {
   return {
     rules: [
@@ -7,6 +5,5 @@ export default function robots() {
         userAgent: '*',
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }
