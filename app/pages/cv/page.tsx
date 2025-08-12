@@ -70,7 +70,7 @@ export default function CVPage() {
   return (
     <div style={{ marginTop: "2vh" }}>
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
-      <p className="mb-8 text-neutral-700 dark:text-neutral-300">{description}</p>
+      <p className="mb-8 text-neutral-700">{description}</p>
       <section className="mb-10">
         <h2 className="text-xl font-bold mb-4">Education</h2>
         <ul>
@@ -78,7 +78,7 @@ export default function CVPage() {
             <li key={idx} className="mb-4">
               <div className="font-semibold">{item.degree}</div>
               <div className="text-sm text-neutral-600">{item.institution}, {item.year}</div>
-              {item.details && <div className="text-neutral-800 dark:text-neutral-200">{item.details}</div>}
+              {item.details && <div className="text-neutral-800">{item.details}</div>}
             </li>
           ))}
         </ul>
@@ -90,7 +90,7 @@ export default function CVPage() {
             <li key={idx} className="mb-4">
               <div className="font-semibold">{item.role}</div>
               <div className="text-sm text-neutral-600">{item.organization} | {item.years}</div>
-              {item.details && <div className="text-neutral-800 dark:text-neutral-200">{item.details}</div>}
+              {item.details && <div className="text-neutral-800">{item.details}</div>}
             </li>
           ))}
         </ul>
@@ -102,7 +102,7 @@ export default function CVPage() {
             <li key={idx} className="mb-4">
               <div className="font-semibold">{item.award}</div>
               <div>{item.year}</div>
-              {item.details && <div className="text-neutral-800 dark:text-neutral-200">{item.details}</div>}
+              {item.details && <div className="text-neutral-800">{item.details}</div>}
             </li>
           ))}
         </ul>
@@ -129,7 +129,7 @@ export default function CVPage() {
             <li key={idx} className="mb-4">
               <div className="font-semibold">{item.role}</div>
               <div className="text-sm text-neutral-600">{item.organization} {item.years && `| ${item.years}`}</div>
-              {item.details && <div className="text-neutral-800 dark:text-neutral-200">{item.details}</div>}
+              {item.details && <div className="text-neutral-800">{item.details}</div>}
             </li>
           ))}
         </ul>

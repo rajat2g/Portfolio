@@ -52,7 +52,7 @@ export default function PodcastsPage() {
   return (
     <div style={{ marginTop: "2vh" }}>
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">{title}</h1>
-      <p className="mb-8 text-neutral-700 dark:text-neutral-300">{description}</p>
+      <p className="mb-8 text-neutral-700">{description}</p>
       <section className="mb-12">
         <h2 className="text-xl font-bold mb-4">Recent Appearances</h2>
         <ul>
@@ -63,7 +63,7 @@ export default function PodcastsPage() {
               </div>
               <p className="text-sm text-neutral-500">{item.date}</p>
               <div className="text-sm text-neutral-600">Host: {item.host}</div>
-              <div className="text-neutral-800 dark:text-neutral-200">{item.description}</div>
+              <div className="text-neutral-800">{item.description}</div>
             </li>
           ))}
         </ul>
@@ -80,7 +80,7 @@ export default function PodcastsPage() {
       </section>
       <section>
         <h2 className="text-xl font-bold mb-4">Speaking Inquiries</h2>
-        <div className="mb-2 text-neutral-800 dark:text-neutral-200 whitespace-pre-line">{inquiries?.instructions}</div>
+        <div className="mb-2 text-neutral-800 whitespace-pre-line">{inquiries?.instructions}</div>
         {inquiries?.email && (
           <a href={`mailto:${inquiries.email}`} className="text-link-primary hover:text-link-hover transition-colors">{inquiries.email}</a>
         )}
