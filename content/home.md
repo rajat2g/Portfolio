@@ -15,26 +15,8 @@ punchline2: I develop data-driven methodologies and AI applications that help
   optimizing investigations, and enhancing project outcomes. My work specializes
   in probabilistic risk assessment, AI applications in tunneling, and digital
   transformation strategies for underground construction projects worldwide.
-featuredProject:
-  - title: West Seattle Ballard Link Extension (WSBLE), Seattle, WA, USA
-    details:
-      - Interpreted geotechnical and hydrogeological data to inform tunnel
-        design.
-      - Reviewed GIRs and GERs to assess subsurface conditions.
-      - Conducted stability and buoyancy analyses for station structures.
-      - Developed FEM-based constitutive models to evaluate tunneling impacts on
-        infrastructure.
-      - Assessed effects of tunneling on ~800 existing facilities.
-      - Evaluated SOE designs for stations and cut-cover portals.
-      - Reviewed and optimized vertical alignment for cost-effective design.
-awardsAndRecognition:
-  - title: Underground Construction Association (UCA) Young Member Award, 2024
-    details:
-      - Award for outstanding contributions to the tunneling community,
-        demonstrating exceptional technical accomplishments, innovative ideas,
-        and a commitment to improving industry practices.
-      - Recognized for driving technical and commercial success, advocating for
-        safety, and making tangible differences in the field.
+featuredProject: []
+awardsAndRecognition: []
 ---
 <!-- ---
 headline: Rajat's Portfolio
