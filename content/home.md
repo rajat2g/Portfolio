@@ -1,20 +1,9 @@
 ---
-punchline1: From Mumbai's dense urban corridors to Bay Area's and Seattle's
-  cutting-edge transit systems—I engineer solutions for the world's most
-  challenging underground projects.  I develop data-driven methodologies and AI
-  applications that help engineers make better decisions on complex tunneling
-  projects—reducing risk, optimizing investigations, and enhancing project
-  outcomes.  My work specializes in probabilistic risk assessment, AI
-  applications in tunneling, and digital transformation strategies for
-  underground construction projects worldwide.  My experience involves combining
-  academic research excellence with hands-on industry experience to advance risk
-  management, digital innovation, and sustainable practices in
-  tunneling.  Currently shaping the future of underground construction at HNTB.
-punchline2: I develop data-driven methodologies and AI applications that help
-  engineers make better decisions on complex tunneling projects—reducing risk,
-  optimizing investigations, and enhancing project outcomes. My work specializes
-  in probabilistic risk assessment, AI applications in tunneling, and digital
-  transformation strategies for underground construction projects worldwide.
+punchline1: From Mumbai's dense urban corridors to Bay Area's and Seattle's cutting-edge transit systems—I engineer solutions for the world's most challenging underground projects.  
+punchline2: I develop data-driven methodologies and AI applications that help engineers make better decisions on complex tunneling projects—reducing risk, optimizing investigations, and enhancing project outcomes.
+punchline3:  My work specializes in probabilistic risk assessment, AI applications in tunneling, and digital transformation strategies for underground construction projects worldwide.
+punchline4: My experience involves combining academic research excellence with hands-on industry experience to advance risk management, digital innovation, and sustainable practices in tunneling. 
+punchline5: Currently shaping the future of underground construction at HNTB.
 featuredProject: []
 awardsAndRecognition: []
 ---

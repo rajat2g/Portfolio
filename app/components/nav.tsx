@@ -5,7 +5,7 @@ const navItems = {
   '/pages/cv': { name: 'CV' },
   '/pages/publications': { name: 'Publications' },
   // '/pages/research': { name: 'Research' },
-  '/pages/podcasts': { name: 'Podcasts' },
+  '/pages/talks': { name: 'Talks' },
   '/blog': { name: 'Blog' },
 }
 

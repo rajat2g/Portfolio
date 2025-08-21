@@ -19,6 +19,9 @@ collections:
         fields:
           - { label: "Punchline 1", name: "punchline1", widget: "string" }
           - { label: "Punchline 2", name: "punchline2", widget: "string" }
+          - { label: "Punchline 3", name: "punchline3", widget: "string" }
+          - { label: "Punchline 4", name: "punchline4", widget: "string" }
+          - { label: "Punchline 5", name: "punchline5", widget: "string" }
           - label: "Featured Project"
             name: "featuredProject"
             widget: "list"
@@ -215,24 +218,24 @@ collections:
               - { label: "Metric", name: "metric", widget: "string" }
               - { label: "value", name: "value", widget: "string" }
 
-  - name: "podcasts"
-    label: "Speaking & Podcasts"
+  - name: "talks"
+    label: "Speaking & Talks"
     files:
       - file: "content/podcasts.md"
-        label: "Speaking & Podcasts"
-        name: "podcasts"
+        label: "Speaking & Talks"
+        name: "talks"
         fields:
-          - { label: "Page Title", name: "title", widget: "string", hint: "Main heading for the podcasts page." }
+          - { label: "Page Title", name: "title", widget: "string", hint: "Main heading for the talks page." }
           - { label: "Page Description", name: "description", widget: "text", hint: "Short summary shown at the top of the page." }
           - label: "Appearances"
             name: "appearances"
             widget: "list"
             summary: "{{title}} ({{date}})"
-            hint: "Add each podcast or speaking appearance."
+            hint: "Add each talk or speaking appearance."
             fields:
               - { label: "Title", name: "title", widget: "string", hint: "Title of the appearance." }
               - { label: "Date", name: "date", widget: "string", hint: "Date or year of the appearance." }
-              - { label: "Link", name: "link", widget: "string", hint: "URL to the podcast or event." }
+              - { label: "Link", name: "link", widget: "string", hint: "URL to the talk or event." }
               - { label: "Host", name: "host", widget: "string", hint: "Host or event name." }
               - { label: "Description", name: "description", widget: "text", hint: "Short description or summary." }
           - label: "Speaking Topics"
@@ -249,7 +252,7 @@ collections:
             summary: "{{format}}"
             hint: "List the types of media formats."
             fields:
-              - { label: "Format", name: "format", widget: "string", hint: "Type of media (e.g., Podcast, Webinar, Panel)." }
+              - { label: "Format", name: "format", widget: "string", hint: "Type of media (e.g., talk, Webinar, Panel)." }
               - { label: "Description", name: "description", widget: "text", hint: "Short description of the format." }
           - label: "Speaking Inquiries"
             name: "inquiries"
