@@ -17,11 +17,13 @@ collections:
         label: "Home Page"
         name: "home"
         fields:
-          - { label: "Punchline 1", name: "punchline1", widget: "string" }
-          - { label: "Punchline 2", name: "punchline2", widget: "string" }
-          - { label: "Punchline 3", name: "punchline3", widget: "string" }
-          - { label: "Punchline 4", name: "punchline4", widget: "string" }
-          - { label: "Punchline 5", name: "punchline5", widget: "string" }
+          - label: "Punchlines"
+            name: "punchlines"
+            widget: "list"
+            summary: "{{punchline}}"
+            hint: "Add, remove, or reorder punchlines as needed."
+            fields:
+              - { label: "Punchline", name: "punchline", widget: "string" }
           - label: "Featured Project"
             name: "featuredProject"
             widget: "list"

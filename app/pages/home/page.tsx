@@ -15,11 +15,7 @@ type AwardItem = {
 };
 
 type HomeContent = {
-  punchline1: string;
-  punchline2: string;
-  punchline3: string;
-  punchline4: string;
-  punchline5: string;
+  punchlines: string[];
   featuredProject: FeaturedProjectItem[];
   awardsAndRecognition?: AwardItem[];
 };
@@ -38,7 +34,7 @@ function getHomeContent(): HomeContent {
 }
 
 export default function Home() {
-  const { punchline1, punchline2, punchline3, punchline4, punchline5, featuredProject, awardsAndRecognition } = getHomeContent();
+  const { punchlines, featuredProject, awardsAndRecognition } = getHomeContent();
   
   return (
     <section>
@@ -47,21 +43,11 @@ export default function Home() {
           <h1 className="mb-4 tracking-tighter text-[28px]">
             <span className="text-gray-500">Hello, I'm</span> Rajat Gangrade.
           </h1>
-          <p className="text-[20px] text-neutral-800 mb-3">
-            {punchline1}
-          </p>
-          <p className="text-[20px] text-neutral-800 mb-3">
-            {punchline2}
-          </p>
-          <p className="text-[20px] text-neutral-800 mb-3">
-            {punchline3}
-          </p>
-          <p className="text-[20px] text-neutral-800 mb-3">
-            {punchline4}
-          </p>
-          <p className="text-[20px] text-neutral-800">
-            {punchline5}
-          </p>
+          {punchlines && punchlines.map((punchline, index) => (
+            <p key={index} className="text-[20px] text-neutral-800 mb-3">
+              {punchline}
+            </p>
+          ))}
         </div>
           <Image
             src="/headshot.jpeg"
