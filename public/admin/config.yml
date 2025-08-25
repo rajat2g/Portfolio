@@ -20,10 +20,9 @@ collections:
           - label: "Punchlines"
             name: "punchlines"
             widget: "list"
-            summary: "{{fields.punchline}}"
+            summary: "{{fields}}"
             hint: "Add, remove, or reorder punchlines as needed."
-            fields:
-              - { label: "Punchline", name: "punchline", widget: "string" } 
+            field: { label: "Punchline", name: "punchline", widget: "string" }
 
   - name: "cv"
     label: "Curriculum Vitae"
