@@ -85,9 +85,11 @@ formats:
       and leadership.
 inquiries:
   instructions: I'm available for speaking engagements, podcast interviews, and
-    panel discussions. I particularly enjoy conversations about technology
-    leadership, innovation, and the human side of digital transformation. For
-    speaking inquiries, please reach out via email with details about your
-    event, audience, and preferred topics.
-  email: your.email@example.com
+    panel discussions. I particularly enjoy conversations about tunneling,
+    automation and AI in geotechnical engineering, digital development, PhD
+    research and its practical impacts, new trends and innovations in tunneling
+    and geotechnical engineering, and leadership. For speaking inquiries, please
+    reach out via email with details about your event, audience, and preferred
+    topics.
+  email: rajatgangrade@gmail.com
 ---
