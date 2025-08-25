@@ -9,4 +9,5 @@ punchlines:
   - My experience involves combining academic research excellence with hands-on
     industry experience to advance risk management, digital innovation, and
     sustainable practices in tunneling.
+  - Currently shaping the future of underground construction with HNTB Corp., USA
 ---
