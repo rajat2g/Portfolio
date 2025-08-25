@@ -22,14 +22,10 @@ education:
 
 
       Research involved assessing the residual strength of soil from lateral spreading and strategies to enhance resilience against similar geotechnical hazards.
-  - degree: B.Tech. in Civil and Environmental Engineering
+  - degree: "B.Tech. in Civil and Environmental Engineering "
     institution: Veermata Jijabai Technological Institute, Mumbai
     year: "2011"
     details: "Project: Quantifying the environmental impact from mangroves"
-  - degree: sda
-    institution: asd
-    year: asd
-    details: asd
 experience:
   - role: Technical Advisor - Geotechnical and Tunneling
     organization: "HNTB Corp. "
