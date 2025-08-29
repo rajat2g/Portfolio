@@ -9,7 +9,7 @@ appearances:
     host: Tunnel and Underground Construction Magazine
     title: "Artificial Intelligence Below Ground: Innovation and Hurdles in North
       American Tunneling"
-    date: August 2025
+    date: "2025"
     description: Magazine publication discussing the opportunities with AI and a
       call to bringing in standardization in AI practice and guidelines in North
       America
