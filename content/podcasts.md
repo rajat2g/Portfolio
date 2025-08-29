@@ -5,6 +5,14 @@ description: Podcast appearances and speaking engagements on quantification of
   transformation and automation in geotechnical engineering and tunneling, and
   sustainability aspects in tunneling.
 appearances:
+  - link: https://tucmagazine.org/artificial-intelligence-below-ground-innovation-and-hurdles-in-north-american-tunneling/
+    host: Tunnel and Underground Construction Magazine
+    title: "Artificial Intelligence Below Ground: Innovation and Hurdles in North
+      American Tunneling"
+    date: August 2025
+    description: Magazine publication discussing the opportunities with AI and a
+      call to bringing in standardization in AI practice and guidelines in North
+      America
   - title: "Digital First Tunneling: Transforming Data into Decisions"
     date: "2025"
     link: https://www.smenet.org/sme-store/webinars
