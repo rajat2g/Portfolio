@@ -131,7 +131,7 @@ export default function Page() {
         <p className="text-neutral-600 text-center">
           Subscribe to my{' '}
           <a 
-            href="https://kushagra0304.substack.com" 
+            href="https://rajatgangrade.substack.com" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-neutral-800 hover:underline font-medium"

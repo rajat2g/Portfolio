@@ -3,6 +3,9 @@ import Parser from 'rss-parser';
 
 const parser = new Parser();
 
+// Force dynamic rendering to prevent caching
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const feed = await parser.parseURL('https://rajatgangrade.substack.com/feed');
@@ -15,7 +18,13 @@ export async function GET() {
       contentSnippet: item.contentSnippet || ''
     }));
 
-    return NextResponse.json({ posts });
+    return NextResponse.json({ posts }, {
+      headers: {
+        'Cache-Control': 'no-store, max-age=0',
+        'CDN-Cache-Control': 'no-store',
+        'Vercel-CDN-Cache-Control': 'no-store'
+      }
+    });
   } catch (error) {
     console.error('Error fetching RSS feed:', error);
     return NextResponse.json(
