@@ -7,7 +7,7 @@ const navItems = {
   // '/pages/research': { name: 'Research' },
   "/pages/talks": { name: "Talks" },
   "/blog": { name: "Blog" },
-  "/awards": { name: "Awards and Honors" },
+  "/pages/awards": { name: "Awards and Honors" },
 };
 
 export function Navbar() {
