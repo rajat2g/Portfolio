@@ -9,6 +9,13 @@ export default function AwardsPage() {
 
       <ul>
         <li className="mb-6">
+          <a href="https://tucmagazine.org/the-best-and-brightest-will-be-recognized-at-nat-in-june/" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:underline">UCA Young Member of the Year</a>
+          <p className="text-sm text-neutral-500">2024</p>
+          <p className="text-sm text-neutral-600">Awarded by: Underground Construction Association (UCA)</p>
+          <p className="text-neutral-800">Recognized at the North American Tunneling Conference opening plenary in Nashville, TN for outstanding contributions and leadership as a young professional in the tunneling and underground construction industry.</p>
+        </li>
+
+        <li className="mb-6">
           <a href="https://www.enr.com/blogs/13-critical-path/post/62244-industry-judges-select-enr-2026-national-top-20-under-40" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:underline">ENR National Top 20 Under 40</a>
           <p className="text-sm text-neutral-500">2026</p>
           <p className="text-sm text-neutral-600">Awarded by: Engineering News-Record (ENR)</p>
