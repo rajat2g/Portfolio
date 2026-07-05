@@ -35,10 +35,36 @@ function getHomeContent(): HomeContent {
 
 export default function Home() {
   const { punchlines, featuredProject, awardsAndRecognition } = getHomeContent();
-  
+
   return (
     <section>
-      <div style={{alignItems: "center" }} className="flex flex-col md:flex-row items-start md:items-center gap-8">
+      <div
+        style={{alignItems: "center", position: "relative" }}
+        className="flex flex-col md:flex-row items-start md:items-center gap-8"
+      >
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            left: 0,
+            top: 0,
+            bottom: 0,
+            width: "40%",
+            zIndex: -1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            pointerEvents: "none",
+            opacity: 0.4,
+          }}
+        >
+          <img
+            src="/tbm-cutterhead.png"
+            alt=""
+            className="cutterhead-rotate"
+            style={{ width: "90%", height: "auto" }}
+          />
+        </div>
         <div>
           <h1 className="mb-4 tracking-tighter text-[28px]">
             <span className="text-gray-500">Hello, I'm</span> Rajat Gangrade.

@@ -33,6 +33,19 @@ html {
   min-width: 360px;
 }
 
+@keyframes cutterhead-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cutterhead-rotate {
+  animation: cutterhead-spin 90s linear infinite;
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 
