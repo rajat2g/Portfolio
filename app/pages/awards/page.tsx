@@ -28,13 +28,6 @@ export default function AwardsPage() {
           <p className="text-sm text-neutral-600">Awarded by: Engineering News-Record (ENR) West</p>
           <p className="text-neutral-800">Named among 30 up-and-coming AEC industry leaders from California, Washington, Oregon, Hawaii, and Alaska. Regional winners were automatically entered into the National Top 20 Under 40 contest.</p>
         </li>
-
-        <li className="mb-6">
-          <a href="https://www.enr.com/articles/62571-enr-wests-2025-top-young-professionals" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:underline">ENR West Top Young Professionals</a>
-          <p className="text-sm text-neutral-500">2024</p>
-          <p className="text-sm text-neutral-600">Awarded by: Engineering News-Record (ENR) West</p>
-          <p className="text-neutral-800">Named among 30 up-and-coming AEC industry leaders from California, Washington, Oregon, Hawaii, and Alaska. Regional winners were automatically entered into the National Top 20 Under 40 contest.</p>
-        </li>
       </ul>
     </div>
   );
