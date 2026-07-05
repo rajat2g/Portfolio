@@ -45,11 +45,11 @@ export default function Home() {
         <div
           aria-hidden="true"
           style={{
-            position: "absolute",
+            position: "fixed",
             left: 0,
             top: 0,
-            bottom: 0,
-            width: "40%",
+            width: "40vw",
+            height: "100vh",
             zIndex: -1,
             display: "flex",
             alignItems: "center",
@@ -62,7 +62,7 @@ export default function Home() {
             src="/tbm-cutterhead.png"
             alt=""
             className="cutterhead-rotate"
-            style={{ width: "90%", height: "auto" }}
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
         <div>
