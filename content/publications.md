@@ -15,16 +15,16 @@ publications:
     link: https://www.researchgate.net/publication/408478276_Beyond_Manual_Methods_AI_Powered_IM_Planning_for_Urban_Tunneling
     description: Presented at the North American Tunneling Conference in
       Anaheim, CA
-  - title: Probabilistic assessment of large diameter tunnel face stability
-      considering spatial variability
-    date: "2025"
-    link: https://www.researchgate.net/publication/391580591_Probabilistic_assessment_of_large_diameter_tunnel_face_stability_considering_spatial_variability
-    description: Presented at the World Tunnel Congress in Stockholm, Sweden
   - title: GIS interoperability framework for risk management in tunneling
       projects
     date: "2026"
     link: https://www.researchgate.net/publication/401609459_GIS_Interoperability_Framework_for_Risk_Management_in_Tunneling_Projects
     description: Presented at the ASCE GeoCongress in Salt Lake City, UT
+  - title: Probabilistic assessment of large diameter tunnel face stability
+      considering spatial variability
+    date: "2025"
+    link: https://www.researchgate.net/publication/391580591_Probabilistic_assessment_of_large_diameter_tunnel_face_stability_considering_spatial_variability
+    description: Presented at the World Tunnel Congress in Stockholm, Sweden
   - title: Risk guided strategy to optimize geotechnical investigations on tunnel
       projects
     date: "2024"
