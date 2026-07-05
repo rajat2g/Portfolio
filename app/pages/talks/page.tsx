@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import yaml from "js-yaml";
-
+ 
 interface Appearance {
   title: string;
   date: string;
