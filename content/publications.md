@@ -5,6 +5,11 @@ description: A collection of my research publications spanning subsurface risk
   probabilistic modeling, geostatistics, digital transformation in tunneling,
   artificial intelligence, and digital twin.
 publications:
+  - title: Reproducible and auditable geotechnical analysis using an AGS-native,
+      cloud-based tool
+    date: "2026"
+    link: https://www.taylorfrancis.com/chapters/oa-edit/10.1201/9781042001064-259/reproducible-auditable-geotechnical-analysis-using-ags-native-cloud-based-tool-gangrade-holcombe
+    description: Presented at the World Tunnel Congress in Montreal, Canada
   - title: Probabilistic assessment of large diameter tunnel face stability
       considering spatial variability
     date: "2025"
