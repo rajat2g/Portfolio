@@ -55,14 +55,14 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             pointerEvents: "none",
-            opacity: 0.4,
+            opacity: 0.32,
           }}
         >
           <img
             src="/tbm-cutterhead.png"
             alt=""
             className="cutterhead-rotate"
-            style={{ width: "200%", height: "auto" }}
+            style={{ width: "300%", height: "auto" }}
           />
         </div>
         <div>
