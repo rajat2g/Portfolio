@@ -55,7 +55,7 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "center",
             pointerEvents: "none",
-            opacity: 0.32,
+            opacity: 0.256,
           }}
         >
           <img
