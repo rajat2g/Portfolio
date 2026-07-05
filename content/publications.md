@@ -22,7 +22,7 @@ publications:
     description: Presented at the World Tunnel Congress in Stockholm, Sweden
   - title: GIS interoperability framework for risk management in tunneling
       projects
-    date: "2025"
+    date: "2026"
     link: https://www.researchgate.net/publication/401609459_GIS_Interoperability_Framework_for_Risk_Management_in_Tunneling_Projects
     description: Presented at the ASCE GeoCongress in Salt Lake City, UT
   - title: Risk guided strategy to optimize geotechnical investigations on tunnel
