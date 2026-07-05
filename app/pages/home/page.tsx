@@ -62,7 +62,7 @@ export default function Home() {
             src="/tbm-cutterhead.png"
             alt=""
             className="cutterhead-rotate"
-            style={{ width: "450%", height: "auto" }}
+            style={{ width: "585%", height: "auto" }}
           />
         </div>
         <div>
